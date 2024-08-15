@@ -19,7 +19,7 @@ subtitle = "暴力出奇迹，打表上省一"
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.jpg"
 
 [article]
 headingAnchor = true
@@ -28,7 +28,7 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "Licensed under CC 4.0 BY-SA"
 
 ## Widgets
 [[widgets.homepage]]
