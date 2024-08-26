@@ -89,9 +89,9 @@ tags:
 
 （如果你不会科学上网，可能下面的图片不会加载地很流畅，见谅）
 
-![校历](./calendar.jpg)
+![校历](calendar.jpg)
 
-![地图](./schoolmap.jpg)
+![地图](schoolmap.jpg)
 
 **Note** 地图仅供参考，不少店家都是过期的，新生的新楼在地图中南校菜鸟驿站西侧。
 
