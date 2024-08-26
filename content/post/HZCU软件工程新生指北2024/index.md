@@ -7,7 +7,8 @@ image: schoolmap.jpg
 categories: 
     - 闲谈
 tags: 
-    - 闲谈
+    - 攻略
+    - 学生工作
 ---
 
 # HZCU软件工程新生指北
