@@ -2,7 +2,7 @@
 title: IT职业发展训练一（编程基础）-2024
 description: IT职业发展训练一（编程基础）-2024
 slug: IT职业发展训练一（编程基础）-2024
-date: 2024-01-27 00:00:00
+date: 2024-08-27 00:00:00
 image: 
 categories: 
     - IT职业发展
