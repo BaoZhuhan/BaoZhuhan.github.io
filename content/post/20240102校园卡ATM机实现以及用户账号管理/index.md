@@ -1,7 +1,7 @@
 ---
 title: 校园卡ATM机实现以及用户账号管理（Python，期末，大作业，小项目）
 description: 本文介绍了基于Python的校园卡账户管理系统，包括用户账户创建、登录、余额查询、交易操作以及管理员权限管理，数据存储在Excel文件中。
-slug: 校园卡ATM机实现以及用户账号管理（Python，期末，大作业，小项目）
+slug: 2024010201
 date: 2024-01-02 00:00:00
 image: 
 categories: 

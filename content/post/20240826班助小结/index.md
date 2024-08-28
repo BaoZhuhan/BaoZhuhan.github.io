@@ -1,7 +1,7 @@
 ---
 title: 班助工作小结
 description: 班助工作小结
-slug: 班助工作小结
+slug: 2024082601
 date: 2024-08-26 00:00:00
 image: cover.jpg
 categories: 

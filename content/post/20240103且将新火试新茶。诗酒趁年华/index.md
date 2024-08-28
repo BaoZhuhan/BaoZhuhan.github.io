@@ -1,7 +1,7 @@
 ---
 title: 且将新火试新茶。诗酒趁年华
 description: 且将新火试新茶。诗酒趁年华
-slug: 且将新火试新茶。诗酒趁年华
+slug: 2024010301
 date: 2024-01-03 00:00:00
 image: cover.jpeg
 categories: 

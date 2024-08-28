@@ -1,7 +1,7 @@
 ---
 title: 在VScode中调试代码Bug的解决方法
 description: 在VScode中调试代码Bug的解决方法
-slug: 在VScode中调试代码Bug的解决方法
+slug: 2023081001
 date: 2023-08-10 00:00:00
 image: cover.png
 categories: 
