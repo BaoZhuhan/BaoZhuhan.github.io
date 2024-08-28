@@ -3,7 +3,7 @@ title: IT职业发展训练一（编程基础）-2024
 description: IT职业发展训练一（编程基础）-2024
 slug: IT职业发展训练一（编程基础）-2024
 date: 2024-08-27 00:00:00
-image: 
+image: cover.png
 categories: 
     - IT职业发展
 tags: 
@@ -12,7 +12,7 @@ tags:
 ---
 # IT职业发展训练一（编程基础）-2024
 
-访问[代码仓库](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox/tree/main/ITCareerDev(I)/Homework/Expriment1)
+访问[代码仓库](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox/tree/main/ITCareerDev(I)/Homework/Experiment1)
 
 ## 7-1 判断火车票座位
 
