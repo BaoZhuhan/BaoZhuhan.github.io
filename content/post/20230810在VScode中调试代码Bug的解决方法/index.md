@@ -6,9 +6,9 @@ date: 2023-08-10 00:00:00
 image: cover.png
 categories: 
     - 配置
+    - C/C++
 tags: 
     - VSCode
-    - 调试
     - C
     - C++
 ---

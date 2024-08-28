@@ -5,9 +5,9 @@ slug: IT职业发展训练一（编程基础）-2024
 date: 2024-08-27 00:00:00
 image: 
 categories: 
-    - IT职业发展
-tags: 
     - Python
+tags: 
+    - IT职业发展
     - 作业
 ---
 # IT职业发展训练一（编程基础）-2024

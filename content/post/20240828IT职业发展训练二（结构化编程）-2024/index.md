@@ -5,9 +5,9 @@ slug: IT职业发展训练二（结构化编程）-2024
 date: 2024-08-28 00:00:00
 image: 
 categories: 
-    - IT职业发展
-tags: 
     - Python
+tags: 
+    - IT职业发展
     - 作业
 ---
 
