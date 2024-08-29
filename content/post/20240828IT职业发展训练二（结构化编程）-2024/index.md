@@ -13,7 +13,7 @@ tags:
 
 # IT职业发展训练二（结构化编程）-2024
 
-点击[访问代码仓库](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox/tree/main/ITCareerDev(I)/Homework/Experiment2)
+访问[代码仓库](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox/tree/main/ITCareerDev(I)/Homework/Experiment2)
 
 ## 6-1 使用函数求特殊a串数列和
 
