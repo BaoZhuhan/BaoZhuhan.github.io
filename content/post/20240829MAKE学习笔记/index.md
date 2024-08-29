@@ -58,7 +58,7 @@ gcc main.c -o hello
 
 使用``./hello``运行可执行文件
 
-### 简单使用Make
+## 简单使用Make
 
 1. 创建头文件``message.h``
 ```c
@@ -94,3 +94,27 @@ hello: main.c message.c
     gcc main.c message.c -o hello
 ```
 
+## Make规范技巧
+1. 分步骤生成可执行文件
+
+```makefile
+hello: main.o message.o
+    gcc main.o message.o -o hello
+
+main.o: main.c
+    gcc -c main.c
+
+message.o: message.c
+    gcc -c message.c
+```
+
+**优点**：如果只修改了``message.c``,那么``main.c``不会被重新执行
+
+2. 伪目标
+
+```diff
++ clean:
++   rm -f *o hello
+```
+
+**注意**：目录下不可以有和伪目标同名的文件
