@@ -8,6 +8,7 @@ categories:
     - 简历
 tags: 
 weight: 1
+comments: false
 ---
 # 简历
 

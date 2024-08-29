@@ -9,6 +9,7 @@ categories:
 tags: 
     - IT职业发展
     - 作业
+comments: false
 ---
 
 访问[代码仓库](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox/tree/main/ITCareerDev(I)/Homework/Experiment3)
@@ -254,6 +255,3 @@ print(" ".join(res))
 ### 解题思路
 此代码段接收两个单词列表，将第二个列表转换为大写形式，然后检查第一个列表中的单词（转换为大写）是否存在于第二个列表中，如果不存在，则添加到结果列表`res`中，最后打印这些单词。
 
---- 
-
-以上是您提供的文本内容按照Markdown格式重新排版后的完整版，包括代码块和解题思路。

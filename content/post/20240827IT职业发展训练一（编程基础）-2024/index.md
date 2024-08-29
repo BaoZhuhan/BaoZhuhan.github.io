@@ -9,6 +9,7 @@ categories:
 tags: 
     - IT职业发展
     - 作业
+comments: false
 ---
 # IT职业发展训练一（编程基础）-2024
 

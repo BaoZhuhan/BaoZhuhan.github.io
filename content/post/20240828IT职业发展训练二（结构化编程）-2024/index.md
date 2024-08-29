@@ -9,6 +9,7 @@ categories:
 tags: 
     - IT职业发展
     - 作业
+comments: false
 ---
 
 # IT职业发展训练二（结构化编程）-2024
