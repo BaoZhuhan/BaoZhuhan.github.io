@@ -1,7 +1,7 @@
 ---
 title: 简历
 description: 个人简历
-slug: CurriculumVitae
+slug: CV
 date: 2024-01-26 00:00:00
 image: 
 categories: 
