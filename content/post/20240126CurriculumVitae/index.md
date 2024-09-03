@@ -10,7 +10,6 @@ tags:
 weight: 1
 comments: false
 ---
-# 简历
 
 ## 基本信息
 - **姓名**：Bao ZH
