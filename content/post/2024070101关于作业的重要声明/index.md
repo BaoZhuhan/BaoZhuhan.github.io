@@ -1,13 +1,11 @@
 ---
-title: 关于作业的重要声明
+title: 重要声明
 description: 关于作业的重要声明
 slug: 2024070101
 date: 2024-07-01 00:00:00
 image: 
 categories: 
-    - 闲谈
 tags: 
-    - 
 comments: false
 ---
 
