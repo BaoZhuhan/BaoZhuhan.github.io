@@ -2,7 +2,7 @@
 title: IT职业发展训练四（大作业）-2024
 description: IT职业发展训练四（大作业）-2024
 slug: 2024091001
-date: 2024-09-10 04:30:00
+date: 2024-09-30 00:00:00
 image: 6.png
 categories: 
     - Python
