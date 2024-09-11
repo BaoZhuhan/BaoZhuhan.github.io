@@ -5,7 +5,7 @@ slug: 2024082902
 date: 2024-08-29 00:00:02
 image: 
 categories: 
-    - TechStack
+    - C/C++
 tags: 
     - 笔记
 comments: false

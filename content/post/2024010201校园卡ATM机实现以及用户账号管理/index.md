@@ -7,7 +7,6 @@ image:
 categories: 
     - Python
 tags: 
-    - Python
     - 作业
 comments: false
 ---

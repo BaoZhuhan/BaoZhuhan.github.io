@@ -9,8 +9,6 @@ categories:
     - C/C++
 tags: 
     - VSCode
-    - C
-    - C++
 comments: false
 ---
 
