@@ -3,7 +3,7 @@ title: 城院指北：如何登陆教务系统
 description: 如何通过城院新生认证进入教务系统
 slug: 2024083001
 date: 2024-08-30 08:30:00
-image: 
+image: HZCU.png
 categories: 
     - 闲谈
 tags: 

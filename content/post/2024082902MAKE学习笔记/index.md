@@ -3,7 +3,7 @@ title: Makefile入门学习笔记
 description: Makefile快速入门的学习笔记和复习指南
 slug: 2024082902
 date: 2024-08-29 00:00:02
-image: 
+image: cmake.jpg
 categories: 
     - C/C++
 tags: 

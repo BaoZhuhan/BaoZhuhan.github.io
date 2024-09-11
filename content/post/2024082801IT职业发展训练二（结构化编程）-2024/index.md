@@ -3,7 +3,7 @@ title: IT职业发展训练二（结构化编程）-2024
 description: IT职业发展训练二（结构化编程）-2024
 slug: 2024082801
 date: 2024-08-28 00:00:00
-image: 
+image: Pythonlogo.png
 categories: 
     - Python
 tags: 

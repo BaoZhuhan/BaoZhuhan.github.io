@@ -3,7 +3,7 @@ title: IT职业发展训练三（组合数据类型）-2024
 description: IT职业发展训练三（组合数据类型）-2024
 slug: 2024082901
 date: 2024-08-29 00:00:00
-image: 
+image: Pythonlogo.png
 categories: 
     - Python
 tags: 

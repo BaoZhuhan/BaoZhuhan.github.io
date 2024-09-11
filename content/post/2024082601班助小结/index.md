@@ -3,12 +3,14 @@ title: 班助工作小结
 description: 班助工作小结
 slug: 2024082601
 date: 2024-08-26 00:00:00
-image: cover.jpg
+image: HZCU.png
 categories: 
     - 闲谈
 tags: 
 comments: false
 ---
+
+![image](cover.jpg)
 
 时光飞逝，忙碌而充满成就的一周悄然落幕。作为软工2402班的班助，我带领大家参与集体活动的日子，也已接近尾声。三个月前，我不幸遭遇了一次严重的骨折，错失了许多宝贵的机会，但幸运的是，我没有错过担任你们的班助。在此，庆祝自己的阶段性退休。
 

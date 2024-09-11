@@ -3,7 +3,7 @@ title: HZCU软件工程新生指北
 description: HZCU软件工程新生指北
 slug: 2024081301
 date: 2024-08-13 00:00:00
-image: schoolmap.jpg
+image: HZCU.png
 categories: 
     - 闲谈
 tags: 
