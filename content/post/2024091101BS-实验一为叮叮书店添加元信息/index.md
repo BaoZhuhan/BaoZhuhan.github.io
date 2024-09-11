@@ -3,11 +3,12 @@ title: BS-实验一为叮叮书店添加元信息
 description: BS-实验一为叮叮书店添加元信息
 slug: 2024091101
 date: 2024-09-11 00:00:00
-image: 
+image: BSlogo.png
 categories: 
     - 前端
 tags: 
     - B/S架构应用开发
+    - 作业
 comments: false
 ---
 
