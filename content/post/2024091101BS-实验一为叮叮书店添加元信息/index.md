@@ -16,12 +16,12 @@ comments: false
 
 访问[代码仓库]()
 
-# 创建项目
+## 创建项目
 
 1. VScode 创建并打开文件夹``bookstore``
 2. 在``bookstore``下创建``index.html``
 
-# 创建网页代码
+## 创建网页代码
 
 3. 在``index.html``内创建如下代码：
 ```html
@@ -38,7 +38,7 @@ comments: false
 </body>
 </html>
 ```
-# 为“叮叮书店”项目首页添加头部信息
+## 为“叮叮书店”项目首页添加头部信息
 
 4. 在``index.html``中添加如下代码片段：
 
