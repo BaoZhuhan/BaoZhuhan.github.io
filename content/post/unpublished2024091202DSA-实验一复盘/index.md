@@ -1,9 +1,9 @@
 ---
 title: 数据结构与算法-实验一复盘
 description: 
-slug: 
-date: 0000-00-00 00:00:00
-image: 
+slug: 2024091202
+date: 2024-09-12 02:47:00
+image: algorithm.jpg
 categories: 
     - 
 tags: 
