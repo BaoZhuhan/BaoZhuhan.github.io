@@ -8,7 +8,7 @@ categories:
     - 闲谈
 tags:
     - 年度小结
-comments: false
+comments: true
 ---
 
 ## 前言

@@ -7,7 +7,7 @@ image: HZCU.png
 categories: 
     - 闲谈
 tags: 
-comments: false
+comments: true
 ---
 
 ![image](cover.jpg)

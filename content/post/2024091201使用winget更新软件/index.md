@@ -9,7 +9,7 @@ categories:
     - 配置
 tags: 
     - 
-comments: false
+comments: true
 ---
 
 访问[使用 WinGet 工具安装和管理应用程序](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/)获取更多winget帮助

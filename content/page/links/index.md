@@ -1,10 +1,6 @@
 ---
 title: 链接
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+slug: links
 menu:
     main: 
         weight: 4
@@ -13,3 +9,9 @@ menu:
 
 comments: false
 ---
+
+## 链接
+1. [博客项目地址](https://github.com/BaoZhuhan/BaoZhuhan.github.io)
+
+2. [HZCU-SoftwareEngineer-MagicBox](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox)
+## 资源

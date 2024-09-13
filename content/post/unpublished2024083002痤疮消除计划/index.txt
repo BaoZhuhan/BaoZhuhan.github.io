@@ -8,7 +8,7 @@ categories:
     - 闲谈
 tags: 
     - 攻略
-comments: false
+comments: true
 ---
 ## 主要病症自查[^1]
 [^1]:[教大家认识不同类型的痘痘和治疗方法-严后友](https://dxy.com/article/41275)

@@ -8,7 +8,7 @@ categories:
     - C/C++
 tags: 
     - 笔记
-comments: false
+comments: true
 ---
 # ！施工中
 > 学习来源：[20分钟Makefile光速入门教程](https://www.bilibili.com/video/BV1tyWWeeEpp) By: [GeekHour](https://space.bilibili.com/102438649)<br>

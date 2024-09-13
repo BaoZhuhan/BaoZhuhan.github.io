@@ -8,7 +8,7 @@ categories:
     - 闲谈
 tags: 
     - 攻略
-comments: false
+comments: true
 ---
 
 1. 首先打开城院个性化师生门户[http://my.hzcu.edu.cn/pc/index.html](http://my.hzcu.edu.cn/pc/index.html)

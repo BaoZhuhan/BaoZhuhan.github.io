@@ -77,7 +77,7 @@ enabled = true
 ## Comments
 [comments]
 enabled = true
-provider = "disqus"
+provider = "giscus"
 
 [comments.disqusjs]
 shortname = ""
@@ -128,15 +128,16 @@ serverName = "cactus.chat"
 siteName = ""
 
 [comments.giscus]
-repo = ""
-repoID = ""
-category = ""
-categoryID = ""
-mapping = ""
-lightTheme = ""
-darkTheme = ""
+repo = "BaoZhuhan/BaoZhuhan.github.io"
+repoID = "R_kgDOMjx5gQ"
+category = "Announcements"
+categoryID = "DIC_kwDOMjx5gc4CibWe"
+mapping = "pathname"
+lightTheme = "light_protanopia"
+darkTheme = "dark_dimmed"
+crossorigin = "anonymous"
 reactionsEnabled = 1
-emitMetadata = 0
+emitMetadata = 1
 
 [comments.gitalk]
 owner = ""

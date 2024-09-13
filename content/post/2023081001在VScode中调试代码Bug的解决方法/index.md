@@ -9,7 +9,7 @@ categories:
     - C/C++
 tags: 
     - VSCode
-comments: false
+comments: true
 ---
 
 在vs code开发代码的途中，我们可能会在运行或调试的途中碰到“launch: program ‘c: \build\Debug\outDebug‘ does not exist”的问题，如图所示。
