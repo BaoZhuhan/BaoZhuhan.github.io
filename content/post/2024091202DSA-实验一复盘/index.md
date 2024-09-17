@@ -5,9 +5,10 @@ slug: 2024091202
 date: 2024-09-12 02:47:00
 image: algorithm.jpg
 categories: 
-    - 
+    - C/C++
 tags: 
-    - 
+    - 数据结构与算法
+    - 作业
 comments: true
 ---
 

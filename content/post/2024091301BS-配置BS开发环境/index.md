@@ -3,7 +3,7 @@ title: 使用VScode配置BS开发环境
 description: 
 slug: 2024091301
 date: 2024-09-13 11:22:24
-image: BSlogo.jpg
+image: BSlogo.webp
 categories: 
     - 前端
     - 配置
