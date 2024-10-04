@@ -31,10 +31,10 @@ url = "https://github.com/BaoZhuhan"
 [social.params]
 icon = "GitHub"
 
-[[social]]
-identifier = "DEV"
-name = "DEV"
-url = "https://dev.to/_hengyuhan"
+# [[social]]
+# identifier = "DEV"
+# name = "DEV"
+# url = "https://dev.to/_hengyuhan"
 
-[social.params]
-icon = "DEV"
+# [social.params]
+# icon = "DEV"
