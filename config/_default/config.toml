@@ -1,0 +1,14 @@
+# ---------- Core informations ----------
+baseurl = "https://baozhuhan.github.io/"
+title = "Zhuhan's Blog"
+
+# ---------- Language Settings ----------
+languageCode = "zh-cn"
+hasCJKLanguage = true
+defaultContentLanguage = "zh-cn"
+
+# i18n support values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+
+# ---------- Page Settings ----------
+paginate = 6

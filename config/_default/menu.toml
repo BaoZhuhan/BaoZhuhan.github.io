@@ -1,0 +1,24 @@
+[[main]]
+identifier = "cv"
+name = "About"
+url = "/p/cv/"
+weight = 5
+[main.params]
+icon = "CV"
+newtab = false
+
+[[social]]
+identifier = "CSDN"
+name = "CSDN"
+url = "https://blog.csdn.net/antonymbaobwang"
+
+[social.params]
+icon = "CSDN"
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/BaoZhuhan"
+
+[social.params]
+icon = "GitHub"
