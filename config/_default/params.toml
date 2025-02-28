@@ -129,13 +129,16 @@ siteName = ""
 
 [comments.giscus]
 repo = "BaoZhuhan/BaoZhuhan.github.io"
-repoID = "R_kgDOMjx5gQ"
+repoID = "R_kgDONtgCiw"
 category = "Announcements"
-categoryID = "DIC_kwDOMjx5gc4CibWe"
+categoryID = "DIC_kwDONtgCi84CnaiU"
 mapping = "pathname"
+strict="0"
 lightTheme = "light_protanopia"
 darkTheme = "dark_dimmed"
 crossorigin = "anonymous"
+lang="zh-CN"
+loading="lazy"
 reactionsEnabled = 1
 emitMetadata = 1
 
