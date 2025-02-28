@@ -54,5 +54,5 @@ comments: true
 
 ![make and running output](prog1-version1-shell-out.png)
 
-![output photo](prog1-version1-output-1.ppm)
+<!-- ![output photo](prog1-version1-output-1.ppm) -->
 
