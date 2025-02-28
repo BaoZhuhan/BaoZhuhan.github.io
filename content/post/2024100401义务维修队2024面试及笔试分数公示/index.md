@@ -11,7 +11,7 @@ tags:
 comments: true
 ---
 ## 分数公示
-测试文本
+
 <p align="middle"><strong>义务维修队2024面试及笔试分数公示</strong>（第二次）</p>
 
 | 学号 | 笔试难度 | 笔试分 | 面试分 | 赋分 | 备注 |
