@@ -1,0 +1,40 @@
+# Configure main menu and social menu
+# [[main]]
+# identifier = "home"
+# name = "Home"
+# url = "/"
+# [main.params]
+# icon = "home"
+# newtab = true
+
+[[social]]
+identifier = "CSDN"
+name = "CSDN"
+url = "https://blog.csdn.net/antonymbaobwang"
+
+[social.params]
+icon = "CSDN"
+
+# [[social]]
+# identifier = "Gitee"
+# name = "Gitee"
+# url = "https://gitee.com/bao-zhuhan"
+
+# [social.params]
+# icon = "Gitee"
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/BaoZhuhan"
+
+[social.params]
+icon = "GitHub"
+
+# [[social]]
+# identifier = "DEV"
+# name = "DEV"
+# url = "https://dev.to/_hengyuhan"
+
+# [social.params]
+# icon = "DEV"
