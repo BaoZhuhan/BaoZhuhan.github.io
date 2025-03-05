@@ -13,5 +13,5 @@ comments: false
 ## 链接
 1. [博客项目地址](https://github.com/BaoZhuhan/BaoZhuhan.github.io)
 
-2. [HZCU-SoftwareEngineer-MagicBox](https://github.com/BaoZhuhan/HZCU-SoftwareEngineer-MagicBox)
+2. [Awesome-SE-Box](https://github.com/BaoZhuhan/Awesome-SE-Box)
 ## 资源
