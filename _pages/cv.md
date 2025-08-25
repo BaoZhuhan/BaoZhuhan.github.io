@@ -8,57 +8,39 @@ redirect_from:
 ---
 
 {% include base_path %}
+<!-- 使用 _data/cv.json 中的数据更新的简历页面 -->
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Education
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- **Hangzhou City University**, B.Eng. in Software Engineering (Sep 2023 — Jul 2027)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Competitions & Honors
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+- 2025 ASC Student Supercomputer Challenge Preliminary — Second Prize
+- 16th Lanqiao Cup C/C++ Programming — Second Prize (Zhejiang Province)
+- 15th Lanqiao Cup C/C++ Programming — Third Prize (Zhejiang Province)
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Skills & Certificates
+
+- Certificates: CET-4, CET-6, PRC Driver's License (C1)
+- Programming: C/C++, Python, Java, Bash, SQL
+- Technical: Parallel Computing, High Performance Computing, Machine Learning, Data Analysis, Algorithm Design
+- Software & Platforms: Linux, Vtuner, Perf, SSH, Docker, Git, Conda, PyTorch
+
+<!-- ## Publications
+
+<ul>{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+## Talks
+
+<ul>{% for post in site.talks reversed %}
+  {% include archive-single-talk-cv.html %}
+{% endfor %}</ul> -->
+
+<!-- ## Teaching
+
+<ul>{% for post in site.teaching reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul> -->

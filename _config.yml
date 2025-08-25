@@ -6,30 +6,46 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 
+# 中文说明：这是 Jekyll 全局配置文件，包含站点元信息、作者信息、插件、构建选项等。
+# 修改此文件后需要重启 `jekyll serve` 才能生效。
+
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Awesome-Zhuhan"
 title_separator          : "-"
 name                     : &name "Zhuhan Bao"
-description              : &description "personal description"
+description              : &description "Zhuhan Bao, Sophomore student majoring in Software Engineering"
 url                      : https://baozhuhan.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "BaoZhuhan/baozhuhan.github.io"
+
+# 中文说明：
+# - `locale`：网站语言，可改为 "zh-CN" 以启用中文本地化。
+# - `site_theme`：主题选择（示例："default" 或 "air"）。
+# - `title`、`description`：显示在网页头部和 meta 中的站点信息。
+# - `url`：站点的基础 URL，部署到 GitHub Pages 时通常为 https://<用户名>.github.io
+# - `baseurl`：如果站点在子目录下（例如 GitHub Pages 的仓库页面），在此填写子路径；如果是用户/组织页，保持空字符串。
+# - `repository`：仓库名，仅用于生成某些链接或统计。
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Zhuhan Bao"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Sophomore student majoring in Software Engineering"
   location         : "China, Hangzhou"
   employer         : "Hangzhou City University"
   uri              : # URL
   email            : "hengyuhan3762@gmail.com" 
+
+# 中文说明：作者信息区块控制侧边栏/作者卡片展示内容。
+# - `avatar`：头像文件名（放在 `assets/images` 或项目根目录视主题而定）。
+# - `name`、`bio`、`location` 等为公开个人信息，留空则不显示对应图标或链接。
+# - 各类社交/学术链接（如 `github`、`orcid`、`googlescholar`）填写后会在作者卡或站点中显示对应图标链接。
 
   # Academic websites
   academia         : # URL
@@ -62,7 +78,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "Zhuhan Bao" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -70,13 +86,13 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "hengyuhan" # Username for X / Twitter
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
   youtube          : # Username
-  zhihu            : # Username
+  zhihu            : "71-76-98-65" # Username
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -86,6 +102,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+
+# 中文说明：`publication_category` 定义了出版物分类及其标题，用于 publications 列表页面。
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -124,12 +142,21 @@ atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
+# 中文说明：
+# - `teaser`：默认的预览图像文件名（用于帖子缩略图回退）。
+# - `future`：是否显示未来日期的文章（true/false）。
+# - `comments.provider`：评论系统选择（例如 disqus、discourse、staticman 等），填写相应子配置以启用。
+# - `staticman`：配置静态评论系统的字段、分支、提交信息等（如果使用 staticman，请确保对应分支存在且权限正确）。
+# - `atom_feed`：RSS/Atom 订阅设置。
+
 
 # SEO Related
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
+
+# 中文说明：搜索引擎验证相关字段，用于站点所有权验证，通常在各搜索引擎站长工具中粘贴提供的值。
 
 
 # Social Sharing
@@ -148,12 +175,18 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+# 中文说明：社交分享和 Open Graph 设置：
+# - `twitter.username`、`facebook.username` 填写后用于生成分享按钮/元数据。
+# - `og_image`、`og_description` 用于社交媒体预览（分享时显示的图片与描述）。
+
 
 # Analytics
 analytics:
   provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
+
+# 中文说明：分析统计配置。将 `provider` 改为 "google" 并填入 `tracking_id`（例如 UA-XXXXX 或 G-XXXXX）可启用 Google Analytics。
 
 
 # Reading Files
@@ -194,6 +227,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+# 中文说明：
+# - `include` 指定需要包含在构建中的额外文件或文件夹（默认 Jekyll 会忽略以 _ 开头的文件夹）；
+# - `exclude` 指定构建时要忽略的文件或文件夹；
+# - `keep_files` 列出构建时需要保留在目标目录（_site）中的特殊文件，例如 .git。
+# - `encoding` 与 `markdown_ext` 定义文件编码与扩展名处理。
+
 
 # Conversion
 markdown: kramdown
@@ -201,6 +240,11 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
+# 中文说明：Markdown 与转换设置：
+# - `markdown` 选择解析器（推荐 kramdown）；
+# - `excerpt_separator` 定义文章摘要的分隔标记；
+# - `incremental` 为 true 可加速增量构建，但可能导致某些变更不完整。
 
 
 # Markdown Processing
@@ -213,6 +257,10 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+# 中文说明：kramdown（Markdown 解析器）选项：
+# - `input: GFM` 使解析器支持 GitHub Flavored Markdown 的语法。
+# - `toc_levels` 控制目录层级。
 
 
 # These settings control the types of collections used by the template
@@ -229,6 +277,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+
+# 中文说明：`collections` 定义自定义内容集合（例如 talks、publications 等），
+# 每个集合可设置是否输出静态页面（output）及其永久链接格式（permalink）。
 
 
 # These settings control how pages and collections are included in the site
@@ -287,11 +338,16 @@ defaults:
       author_profile: true
       share: true
 
+# 中文说明：`defaults` 用于为不同类型的页面（posts、pages、teaching 等）设置默认 front matter 值，
+# 例如默认布局、是否显示作者信息、分享按钮和评论等。
+
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# 中文说明：Sass/SCSS 配置，`sass_dir` 指向 Sass 源文件目录，`style` 控制编译输出（compressed 会压缩 CSS）。
 
 
 # Outputting
@@ -299,6 +355,10 @@ permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# 中文说明：输出与时区设置：
+# - `permalink` 定义文章/页面的 URL 结构；可根据需要调整为 `/:year/:month/:day/:title/` 等。
+# - `paginate` 与 `paginate_path` 可用于分页设置（若启用）。
 
 
 # Plugins
@@ -310,6 +370,9 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
+# 中文说明：插件列表（Plugins）列出在构建时加载的 jekyll 插件，
+# 如果在本地使用 `--safe` 模式或 GitHub Pages 环境，请确保这些插件在白名单或托管环境支持。
+
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
@@ -318,6 +381,8 @@ whitelist:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+
+# 中文说明：`whitelist` 用于在 --safe 模式下明确允许的插件，通常与 GitHub Pages 的安全策略有关。
 
 
 # Archives
@@ -355,3 +420,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# 中文说明：归档与压缩设置：
+# - `category_archive` 和 `tag_archive` 控制分类/标签归档页面的生成方式和路径。
+# - `compress_html` 用于在构建时压缩 HTML 输出，`ignore.envs` 列表中包含的环境不会被压缩（例如 development）。
