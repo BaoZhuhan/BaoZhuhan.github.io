@@ -1,15 +1,17 @@
 ---
 permalink: /
-title: "Welcome To Awesome-Zhuhan"
+title: <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Great+Vibes&size=40&pause=1000&repeat=false&color=B711C8&vCenter=true&random=true&width=800&height=100&lines=Hi%2C+I'm+Zhuhan+Bao" alt="Typing SVG" /></a>
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Great+Vibes&size=40&pause=1000&repeat=false&color=B711C8&vCenter=true&random=true&width=800&height=100&lines=Hi%2C+I'm+Zhuhan+Bao" alt="Typing SVG" /></a>
 
-I am a junior majoring in **Software Engineering** at [Hangzhou City University (HZCU)](http://www.hzcu.edu.cn/), actively engaged in both research and competitive practice. As a member of the [HZCU High Performance Computing Team](http://hzcu-hpc-team.github.io/), I participate in HPC competitions and training, while also contributing to projects in the AI Laboratory. My technical background spans **C, Python, and Java**, with practical experience in Linux environments. You can reach me at **hengyuhan3762@gmail.com** or explore more on my [personal resume](https://baozhuhan.github.io/cv/).
+Junior in Software Engineering at Hangzhou City University, researching **HPC and Medical AI**. Member of the HZCU HPC Team. Skilled in C, Python, Java, with Linux experience. [^1]<br>软件工程大三，就读于浙大城市学院，研究方向为**高性能计算、医学人工智能**。我目前任校超算队队长。熟悉 C、Python、Java，具备Linux实践经验。
 
-我是一名就读于[浙大城市学院(HZCU)](http://www.hzcu.edu.cn/)的软件工程大三学生，积极参与科研与竞赛实践。目前是[HZCU 高性能计算队](http://hzcu-hpc-team.github.io/)的成员，参与 HPC 竞赛与训练，同时也在 AI 实验室中参与科研与项目开发。我的技术背景涵盖 **C、Python、Java**，并具备在 Linux 环境下的实践经验。您可以通过 **hengyuhan3762@gmail.com** 联系我，或访问我的[简历](https://baozhuhan.github.io/cv/)了解更多
+### News
+📢 LLM Inference Optimization and Applications on Hygon DCU (Aug 19, 2025) — Exploring multi-card LLM inference optimization on Hygon DCU and its educational applications. [Details](/talks/2025-08-19-talk-1).
 
 
+
+[^1]: 相关链接:[浙大城市学院(Hangzhou City University)](http://www.hzcu.edu.cn/) ; [浙大城市学院超算队(HZCU HPC Team)](http://hzcu-hpc-team.github.io/)
