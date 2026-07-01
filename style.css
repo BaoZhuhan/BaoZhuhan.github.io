@@ -390,6 +390,21 @@ a:hover {
   object-fit: contain;
 }
 
+/* Duke wordmark needs extra size vs square emblems */
+.entry_logo img.logo_duke {
+  max-height: 86px;
+}
+
+/* Dark mode: social link icons turn white-ish */
+[data-theme="dark"] .social_link {
+  color: var(--text);
+  border-color: var(--border);
+}
+[data-theme="dark"] .social_link:hover {
+  color: var(--ivory-light);
+  border-color: var(--ivory-light);
+}
+
 .entry_body { flex: 1; }
 
 .entry_title {

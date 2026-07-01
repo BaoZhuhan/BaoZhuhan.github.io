@@ -23,7 +23,7 @@
         </button>
       </div>
       <p class="site_tagline">
-        Junior@HZCU <span class="dot">·</span> Visiting@Duke
+        SE Junior in Hangzhou City University <span class="dot">·</span> Visiting Student in Duke University
       </p>
     </div>
   </header>
@@ -38,20 +38,18 @@
       </div>
       <div class="bio_text">
         <p>
-          Hi! I'm <strong>Zhuhan Bao</strong> (鲍竹涵), a junior undergraduate majoring in
-          <strong>Software Engineering</strong> at <a href="http://www.hzcu.edu.cn/" target="_blank">Hangzhou City University</a>.
-          I am currently participating in a remote visiting study program at <strong>Duke University School of Medicine</strong>.
+          Hi! I'm <strong>Zhuhan Bao (鲍竹涵)</strong>, a junior undergraduate majoring in
+          Software Engineering at <a href="http://www.hzcu.edu.cn/" target="_blank">Hangzhou City University</a>.
+          I am currently participating in a remote visiting study program at Duke University School of Medicine.
         </p>
         <p>
           I work in <a href="https://biostat.duke.edu/profile/chuan-hong" target="_blank">Prof. Chuan Hong</a>'s research group. My current research focuses on
-          <strong>Artificial Intelligence and Agents</strong>, including <strong>AI for Healthcare</strong>,
-          <strong>Medical NLP</strong>, and <strong>Medical World Models</strong>.
+          Artificial Intelligence and Agents, including AI for Healthcare,
+          Medical NLP, and Medical World Models.
         </p>
         <div class="bio_tags">
-          <span class="tag">HPC Optimization</span>
+          <span class="tag">HPC</span>
           <span class="tag">Medical AI</span>
-          <span class="tag">CUDA / Triton</span>
-          <span class="tag">Parallel Computing</span>
         </div>
       </div>
     </div>
@@ -163,7 +161,7 @@
 
     <div class="entry_card">
       <div class="entry_logo">
-        <img src="assets/images/duke_logo.svg" alt="Duke University" />
+        <img src="assets/images/duke_logo.svg" alt="Duke University" class="logo_duke" />
       </div>
       <div class="entry_body">
         <div class="entry_title">Duke University</div>
@@ -426,8 +424,8 @@
   function toggleNews() {
     const hidden = document.querySelectorAll('#news_list .news_hidden');
     const btn = document.getElementById('news_toggle_btn');
-    const show = hidden[0].style.display !== 'list-item';
-    hidden.forEach(item => { item.style.display = show ? 'list-item' : 'none'; });
+    const show = getComputedStyle(hidden[0]).display === 'none';
+    hidden.forEach(item => { item.style.display = show ? 'flex' : 'none'; });
     btn.textContent = show ? 'Show less ↑' : 'Show more ↓';
   }
 
