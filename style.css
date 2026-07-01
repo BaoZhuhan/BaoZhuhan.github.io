@@ -128,13 +128,12 @@ a:hover {
 
 .theme_btn {
   background: none;
-  border: 1px solid var(--border-light);
+  border: none;
   cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 0;
+  padding: 4px 6px;
   line-height: 1;
   color: var(--text-muted);
-  transition: all 0.25s ease;
+  transition: color 0.25s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +141,6 @@ a:hover {
 
 .theme_btn:hover {
   color: var(--text);
-  border-color: var(--border);
 }
 
 .theme_btn svg {
@@ -417,11 +415,9 @@ a:hover {
 /* Dark mode: theme toggle button */
 [data-theme="dark"] .theme_btn {
   color: var(--text-muted);
-  border-color: var(--border);
 }
 [data-theme="dark"] .theme_btn:hover {
   color: var(--ivory-light);
-  border-color: var(--ivory-light);
 }
 
 .entry_body { flex: 1; }
