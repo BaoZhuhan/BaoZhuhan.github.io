@@ -114,7 +114,33 @@ a:hover {
 .header_top {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+}
+
+.header_buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease;
+}
+
+.lang_btn:hover {
+  color: var(--text);
+  text-decoration: none;
 }
 
 .site_name {
@@ -416,10 +442,12 @@ section {
 }
 
 /* Dark mode: theme toggle button */
-[data-theme="dark"] .theme_btn {
+[data-theme="dark"] .theme_btn,
+[data-theme="dark"] .lang_btn {
   color: var(--text-muted);
 }
-[data-theme="dark"] .theme_btn:hover {
+[data-theme="dark"] .theme_btn:hover,
+[data-theme="dark"] .lang_btn:hover {
   color: var(--ivory-light);
 }
 
