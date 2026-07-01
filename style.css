@@ -375,32 +375,19 @@ a:hover {
 
 .entry_logo {
   flex-shrink: 0;
-  width: 100px;
+  width: 140px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-top: 2px;
+  padding: 4px;
 }
 
 .entry_logo img {
   max-width: 100%;
-  max-height: 48px;
+  max-height: 72px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-}
-
-/* Dark background wrapper for white/light logos (e.g. HZCU) */
-.logo_dark_bg {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 10px;
-  background: #003366;
-  border-radius: 4px;
-}
-
-.logo_dark_bg img {
-  max-height: 28px;
-  opacity: 0.92;
 }
 
 .entry_body { flex: 1; }
@@ -641,7 +628,7 @@ a:hover {
   }
 
   .entry_logo img {
-    max-height: 36px;
+    max-height: 60px;
   }
 
   .news_item {
