@@ -297,11 +297,9 @@ a:hover {
   letter-spacing: -0.01em;
 }
 
-/* ---------- Rules ---------- */
-.section_rule {
-  border: none;
-  border-top: 1px solid var(--border-light);
-  margin: 48px 0;
+/* ---------- Section spacing ---------- */
+section {
+  margin-top: 56px;
 }
 
 /* ---------- News ---------- */
@@ -675,7 +673,7 @@ a:hover {
 
   .section_heading { font-size: 1.35rem; }
 
-  .section_rule { margin: 36px 0; }
+  section { margin-top: 40px; }
 }
 
 @media (max-width: 440px) {
