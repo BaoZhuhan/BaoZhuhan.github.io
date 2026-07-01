@@ -399,7 +399,7 @@ a:hover {
 
 /* Duke wordmark needs extra size vs square emblems */
 .entry_logo img.logo_duke {
-  max-height: 86px;
+  max-height: 69px;
 }
 
 /* Dark mode: invert all institution logos to white */
