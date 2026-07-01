@@ -128,17 +128,26 @@ a:hover {
 
 .theme_btn {
   background: none;
-  border: none;
+  border: 1px solid var(--border-light);
   cursor: pointer;
-  font-size: 1.2rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  opacity: 0.5;
-  transition: opacity 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 0;
   line-height: 1;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.theme_btn:hover { opacity: 1; }
+.theme_btn:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.theme_btn svg {
+  display: block;
+}
 
 .site_tagline {
   font-size: 1rem;
@@ -401,6 +410,16 @@ a:hover {
   border-color: var(--border);
 }
 [data-theme="dark"] .social_link:hover {
+  color: var(--ivory-light);
+  border-color: var(--ivory-light);
+}
+
+/* Dark mode: theme toggle button */
+[data-theme="dark"] .theme_btn {
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+[data-theme="dark"] .theme_btn:hover {
   color: var(--ivory-light);
   border-color: var(--ivory-light);
 }
