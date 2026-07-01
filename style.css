@@ -402,6 +402,11 @@ a:hover {
   max-height: 86px;
 }
 
+/* Dark mode: invert all institution logos to white */
+[data-theme="dark"] .entry_logo img {
+  filter: brightness(0) invert(1);
+}
+
 /* Dark mode: social link icons turn white-ish */
 [data-theme="dark"] .social_link {
   color: var(--text);
