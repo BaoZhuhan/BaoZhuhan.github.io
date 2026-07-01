@@ -388,6 +388,21 @@ a:hover {
   object-fit: contain;
 }
 
+/* Dark background wrapper for white/light logos (e.g. HZCU) */
+.logo_dark_bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  background: #003366;
+  border-radius: 4px;
+}
+
+.logo_dark_bg img {
+  max-height: 28px;
+  opacity: 0.92;
+}
+
 .entry_body { flex: 1; }
 
 .entry_title {
