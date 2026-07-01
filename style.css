@@ -404,7 +404,7 @@ a:hover {
 
 /* Dark mode: invert all institution logos to white */
 [data-theme="dark"] .entry_logo img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) !important;
 }
 
 /* Dark mode: social link icons turn white-ish */
