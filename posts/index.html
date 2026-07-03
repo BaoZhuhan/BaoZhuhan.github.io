@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posts · Zhuhan Bao</title>
+  <meta name="description" content="All blog posts." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <style>
+    .post_list_full {
+      margin-top: 40px;
+    }
+    .post_list_full .post_card {
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+      text-decoration: none;
+      transition: padding 0.2s;
+    }
+    .post_list_full .post_card:last-of-type {
+      border-bottom: none;
+    }
+    .post_list_full .post_card:hover {
+      padding-left: 8px;
+    }
+    .post_list_full .post_card_top {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .post_list_full .post_card_date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+    .post_list_full .post_card_tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 1px 8px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .post_list_full .post_card_title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .post_list_full .post_card_excerpt {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<main class="page_wrap page_wrap_life">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm"><a href="../hello/index.html" class="header_back">When I'm not researching</a></h1>
+        <div class="header_buttons">
+          <a href="../hello/index.html" class="lang_btn" title="Back">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme_icon_moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="site_tagline" style="margin-top:8px;">All posts</p>
+    </div>
+  </header>
+
+  <div class="post_list_full">
+    <!-- listed in reverse chronological order via hello/index.html -->
+  </div>
+
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../hello/index.html">← Back</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(t) { html.setAttribute('data-theme', t); if (document.querySelector('.theme_icon_sun')) { document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : ''; document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none'; } localStorage.setItem('theme', t); }
+  toggle.addEventListener('click', () => { setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>

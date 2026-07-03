@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Fix Debugging Issues in VSCode · Zhuhan Bao</title>
+  <meta name="description" content="Solutions for fixing debugging errors in VSCode when the program path is incorrect." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+<main class="page_wrap article_wrap">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm"><a href="../hello/index.html" class="header_back">When I'm not researching</a></h1>
+        <div class="header_buttons">
+          <a href="../posts/index.html" class="lang_btn" title="All posts">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme_icon_moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <header class="article_header">
+      <h1 class="article_title">How to Fix Debugging Issues in VSCode</h1>
+      <div class="article_meta">
+        <time class="article_date">Aug 10, 2023</time>
+        <span class="article_tag">Configuration, C/C++</span>
+      </div>
+    </header>
+    <div class="article_body">
+      <p>When developing code in VS Code, you may encounter the error:</p>
+
+      <p><code>launch: program 'c:\build\Debug\outDebug' does not exist</code></p>
+
+      <p>as shown in the figure below.</p>
+
+      <img src="../assets/images/posts/2023-08/10-1-cover.png" alt="image-1" />
+
+      <p>Following the hint, we can open the <code>launch.json</code> file:</p>
+
+      <pre><code>{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/13967/Desktop/c/output",
+      "program": "c:/Users/13967/Desktop/c/output/build/Debug/outDebug/",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+      <p>After checking carefully, the issue comes from the <code>program</code> field:</p>
+
+      <pre><code>"program": "c:/Users/13967/Desktop/c/output/build/Debug/outDebug/",</code></pre>
+
+      <p>This path points to a general location, but it is not precise enough.</p>
+
+      <img src="../assets/images/posts/2023-08/10-1-image-2.png" alt="image-2" />
+
+      <p>As shown, all my compiled C program executables are stored in:</p>
+
+      <p><code>C:\Users\13967\Desktop\c\output</code></p>
+
+      <p>instead of</p>
+
+      <p><code>c:/Users/13967/Desktop/c/output/build/Debug/outDebug/</code> defined in <code>launch.json</code>.</p>
+
+      <hr />
+
+      <h3>Solution</h3>
+
+      <p>We need to <strong>set the file path to the actual folder where the compiled C executables are stored on your computer</strong>. Then append</p>
+
+      <pre><code>"${fileBasenameNoExtension}.exe"</code></pre>
+
+      <p>to locate the specific <code>.exe</code> program being debugged.</p>
+
+      <p>For example, on my computer, the corrected setting is:</p>
+
+      <pre><code>"program": "c:/Users/13967/Desktop/c/output/${fileBasenameNoExtension}.exe"</code></pre>
+
+      <img src="../assets/images/posts/2023-08/10-1-image-3.png" alt="image-3" />
+
+      <p>Now the problem is solved! The program can be executed, breakpoints can be set, and debugging works as expected.</p>
+
+      <hr />
+
+      <h3>References</h3>
+
+      <ul>
+        <li><a href="https://blog.csdn.net/m0_55957625/article/details/130466016">CSDN Blog by Maxwell Yuan</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/answers/questions/1240097/how-to-fix-builddebugoutdebug-does-not-exist">Microsoft Q&amp;A Community</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../posts/index.html">&#8592; All posts</a>
+      <span class="dot">&#183;</span>
+      <a href="../hello/index.html">When I'm not researching</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(t) { html.setAttribute('data-theme', t); document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : ''; document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none'; localStorage.setItem('theme', t); }
+  toggle.addEventListener('click', () => { setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>

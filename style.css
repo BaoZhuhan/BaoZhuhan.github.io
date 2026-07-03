@@ -17,6 +17,12 @@
   --accent-warm: #d97757;
   --accent-warm-light: #f5e6e0;
 
+  /* Anthropic accent palette */
+  --accent-cream: #EFE1C4;
+  --accent-sage: #788C5D;
+  --accent-rose: #EBCECE;
+  --accent-mint: #BCD1CA;
+
   /* Semantic tokens */
   --bg: var(--ivory-light);
   --bg-card: #faf9f4;
@@ -700,6 +706,201 @@ section {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--border);
+}
+
+/* ============================================================
+   ARTICLE / POST — Anthropic-inspired article layout
+   ============================================================ */
+
+.article_wrap {
+  max-width: 720px;
+}
+
+.article_header {
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.article_title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.article_meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.article_date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.article_tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 2px 10px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  letter-spacing: 0.02em;
+}
+
+.article_body {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.article_body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 40px;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.article_body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.article_body p {
+  margin-bottom: 16px;
+}
+
+.article_body a {
+  color: var(--text-secondary);
+  text-underline-offset: 2px;
+  text-decoration-color: var(--border);
+}
+
+.article_body a:hover {
+  color: var(--text);
+  text-decoration-color: var(--text);
+}
+
+.article_body strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.article_body ul,
+.article_body ol {
+  margin: 8px 0 16px;
+  padding-left: 24px;
+}
+
+.article_body li {
+  margin-bottom: 4px;
+}
+
+.article_body hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 32px 0;
+}
+
+.article_body blockquote {
+  border-left: 2px solid var(--border);
+  margin: 16px 0;
+  padding: 4px 0 4px 20px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.article_body pre {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 16px 0 20px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.article_body code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--bg-card);
+  padding: 1px 5px;
+  color: var(--text-secondary);
+}
+
+.article_body pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.article_body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 20px;
+  font-size: 0.88rem;
+}
+
+.article_body th,
+.article_body td {
+  border: 1px solid var(--border-light);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.article_body th {
+  background: var(--bg-card);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article_body td {
+  color: var(--text-secondary);
+}
+
+.article_body img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-light);
+  margin: 16px 0;
+  display: block;
+}
+
+.article_body .footnote {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.article_footer_nav {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 680px) {
+  .article_title {
+    font-size: 1.5rem;
+  }
 }
 
 /* ============================================================

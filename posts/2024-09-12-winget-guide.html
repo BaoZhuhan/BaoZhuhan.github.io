@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update System Software with Winget (No VPN Required) · Zhuhan Bao</title>
+  <meta name="description" content="Winget is a command-line tool launched by Microsoft for installing, updating, and managing software in Windows. It provides a simple, fast, and VPN-free way to update system software while ensuring source security and reliability." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+<main class="page_wrap article_wrap">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm"><a href="../hello/index.html" class="header_back">When I'm not researching</a></h1>
+        <div class="header_buttons">
+          <a href="../posts/index.html" class="lang_btn" title="All posts">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme_icon_moon" style="display:none" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <header class="article_header">
+      <h1 class="article_title">Update System Software with Winget (No VPN Required)</h1>
+      <div class="article_meta">
+        <time class="article_date">Sep 12, 2024</time>
+        <span class="article_tag">Configuration</span>
+      </div>
+    </header>
+    <div class="article_body">
+      <p>For more help on Winget, visit <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">Use the WinGet tool to install and manage applications</a>.</p>
+
+      <p>&#x8bbf;&#x95ee;<a href="https://learn.microsoft.com/zh-cn/windows/package-manager/winget/">&#x4f7f;&#x7528; WinGet &#x5de5;&#x5177;&#x5b89;&#x88c5;&#x548c;&#x7ba1;&#x7406;&#x5e94;&#x7528;&#x7a0b;&#x5e8f;</a>&#x83b7;&#x53d6;&#x66f4;&#x591a; winget &#x5e2e;&#x52a9;&#x3002;</p>
+
+      <h2>Change Winget Source | &#x66f4;&#x6362; winget &#x6e90;</h2>
+
+      <p>Open <strong>PowerShell</strong> in <strong>administrator mode</strong>.</p>
+
+      <p>&#x4f7f;&#x7528; <strong>&#x7ba1;&#x7406;&#x5458;&#x6a21;&#x5f0f;</strong> &#x6253;&#x5f00; <strong>Powershell</strong>&#x3002;</p>
+
+      <p>Enter the following commands to change the <code>winget</code> source to the USTC mirror<sup class="footnote">[1]</sup>:</p>
+
+      <p>&#x8f93;&#x5165;&#x4ee5;&#x4e0b;&#x547d;&#x4ee4;&#xff0c;&#x66f4;&#x6362; <code>winget</code> &#x6e90;&#x4e3a;&#x4e2d;&#x79d1;&#x5927;&#x955c;&#x50cf;&#x6e90;&#xff1a;</p>
+
+      <pre><code>winget source remove winget
+winget source add winget https://mirrors.ustc.edu.cn/winget-source</code></pre>
+
+      <h2>List Upgradable Software | &#x5217;&#x51fa;&#x66f4;&#x65b0;&#x8f6f;&#x4ef6;&#x5217;&#x8868;</h2>
+
+      <pre><code>winget upgrade</code></pre>
+
+      <h2>Upgrade All Software | &#x66f4;&#x65b0;&#x5168;&#x90e8;&#x8f6f;&#x4ef6;</h2>
+
+      <pre><code>winget upgrade --all</code></pre>
+
+      <hr />
+      <p class="footnote">[1] The USTC mirror provides more stable access within mainland China.&#x5899;&#x5185;&#x8bbf;&#x95ee;&#x8f83;&#x4e3a;&#x7a33;&#x5b9a;&#xff0c;&#x9002;&#x5408;&#x5883;&#x5185;&#x4f7f;&#x7528;&#x3002;</p>
+    </div>
+  </article>
+
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../posts/index.html">&larr; All posts</a>
+      <span class="dot">·</span>
+      <a href="../hello/index.html">When I'm not researching</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(t) { html.setAttribute('data-theme', t); document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : ''; document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none'; localStorage.setItem('theme', t); }
+  toggle.addEventListener('click', () => { setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>
