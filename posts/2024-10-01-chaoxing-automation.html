@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Automate "chaoxing.com" · Zhuhan Bao</title>
+  <meta name="description" content="This blog post is write for WWL" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+<main class="page_wrap article_wrap">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm"><a href="../hello/index.html" class="header_back">When I'm not researching</a></h1>
+        <div class="header_buttons">
+          <a href="../posts/index.html" class="lang_btn" title="All posts">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme_icon_moon" style="display:none" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <header class="article_header">
+      <h1 class="article_title">How to Automate "chaoxing.com"</h1>
+      <div class="article_meta">
+        <time class="article_date">Oct 1, 2024</time>
+        <span class="article_tag">Configuration</span>
+      </div>
+    </header>
+    <div class="article_body">
+      <p><em>Working&#xff1a;&#x672c;&#x6587;&#x5c1a;&#x672a;&#x5b8c;&#x7ed3;</em><br>
+      <em>&#x672c;&#x6587;&#x7ae0;&#x6240;&#x4ecb;&#x7ecd;&#x7684;&#x65b9;&#x6cd5;&#x4ec5;&#x4f9b;&#x53c2;&#x8003;&#xff0c;&#x8bf7;&#x786e;&#x4fdd;&#x9605;&#x8bfb;&#x5e76;&#x5b8c;&#x5168;&#x540c;&#x610f;<strong>&#x91cd;&#x8981;&#x58f0;&#x660e;</strong><sup class="footnote">[1]</sup><sup class="footnote">[2]</sup></em></p>
+
+      <h2>&#x6982;&#x8ff0;</h2>
+
+      <p>&#x672c;&#x6587;&#x65e8;&#x5728;&#x4ecb;&#x7ecd;&#x4e00;&#x5957;&#x65b9;&#x6cd5;&#x8bba;&#xff0c;&#x4f7f;&#x5f97;&#x540c;&#x5b66;&#x4eec;&#x53ef;&#x4ee5;&#x642d;&#x5efa;&#x4e00;&#x4e2a;&#x8d85;&#x661f;&#x81ea;&#x52a8;&#x5316;&#x5237;&#x8bfe;&#x5de5;&#x5177;&#x3002;&#x5e76;&#x5b9e;&#x73b0;&#x9ad8;&#x6548;&#x7387;&#x6302;&#x673a;&#x5237;&#x5927;&#x6c34;&#x8bfe;&#x3002;</p>
+
+      <p><strong>&#x76ee;&#x5f55;</strong></p>
+      <ol>
+        <li>&#x914d;&#x7f6e; chromium &#x5185;&#x6838;&#x6d4f;&#x89c8;&#x5668;</li>
+        <li>&#x914d;&#x7f6e; Tampermonkey &#x63d2;&#x4ef6;</li>
+        <li>&#x5b89;&#x88c5; &#x8d85;&#x661f;&#x5b78;&#x7fd2;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;[&#x4e00;&#x9375;&#x555f;&#x52d5;][&#x6700;&#x5c0f;&#x5316;&#x904b;&#x884c;] &#x63d2;&#x4ef6;</li>
+        <li>&#x5982;&#x4f55;&#x5237;&#x8bfe;</li>
+        <li>&#x3010;&#x8fdb;&#x9636;&#x3011;&#x914d;&#x7f6e;&#x672c;&#x5730;&#x670d;&#x52a1;&#x5668;</li>
+        <li>&#x3010;&#x8fdb;&#x9636;&#x3011;&#x914d;&#x7f6e;&#x9898;&#x5e93;</li>
+      </ol>
+
+      <h2>&#x914d;&#x7f6e; Chromium &#x5185;&#x6838;&#x6d4f;&#x89c8;&#x5668;</h2>
+
+      <p>&#x4e3a;&#x4e86;&#x987a;&#x5229;&#x4f7f;&#x7528;&#x8d85;&#x661f;&#x81ea;&#x52a8;&#x5316;&#x5237;&#x8bfe;&#x5de5;&#x5177;&#xff0c;&#x9996;&#x5148;&#x9700;&#x8981;&#x5728;&#x7535;&#x8111;&#x4e0a;&#x5b89;&#x88c5;&#x4e00;&#x4e2a;&#x57fa;&#x4e8e; Chromium &#x5185;&#x6838;&#x7684;&#x6d4f;&#x89c8;&#x5668;&#x3002;&#x8fd9;&#x662f;&#x56e0;&#x4e3a;&#x8bb8;&#x591a;&#x81ea;&#x52a8;&#x5316;&#x811a;&#x672c;&#x548c;&#x63d2;&#x4ef6;&#x4f9d;&#x8d56;&#x4e8e; Chromium &#x63d0;&#x4f9b;&#x7684;&#x517c;&#x5bb9;&#x6027;&#x548c;&#x529f;&#x80fd;&#x3002;&#x4ee5;&#x4e0b;&#x662f;&#x51e0;&#x6b3e;&#x5e38;&#x7528;&#x7684; Chromium &#x5185;&#x6838;&#x6d4f;&#x89c8;&#x5668;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x6839;&#x636e;&#x81ea;&#x5df1;&#x7684;&#x9700;&#x6c42;&#x9009;&#x62e9;&#xff1a;</p>
+
+      <p><img src="../assets/images/posts/2024-10-01/1.png" alt="edge" /></p>
+
+      <ol>
+        <li><a href="https://www.microsoft.com/zh-cn/edge">Microsoft Edge</a>
+        &#x662f; Windows &#x7cfb;&#x7edf;&#x9884;&#x5236;&#x7684;&#x6d4f;&#x89c8;&#x5668;&#x3002;<strong>&#x672c;&#x6587;&#x6f14;&#x793a;&#x5c06;&#x57fa;&#x4e8e; Edge &#x8fdb;&#x884c;&#x3002;</strong></li>
+
+        <li><a href="https://www.google.com/intl/zh-CN/chrome/">Google Chrome</a>
+        &#x662f;&#x5168;&#x7403;&#x4f7f;&#x7528;&#x6700;&#x5e7f;&#x6cdb;&#x7684;&#x6d4f;&#x89c8;&#x5668;&#x4e4b;&#x4e00;&#xff0c;&#x4ee5;&#x5176;&#x5feb;&#x901f;&#x7684;&#x52a0;&#x8f7d;&#x901f;&#x5ea6;&#x548c;&#x4e30;&#x5bcc;&#x7684;&#x6269;&#x5c55;&#x751f;&#x6001;&#x7cfb;&#x7edf;&#x8457;&#x79f0;&#x3002;</li>
+
+        <li><a href="https://www.opera.com/zh-cn">Opera</a>
+        &#x662f;&#x4e00;&#x6b3e;&#x529f;&#x80fd;&#x4e30;&#x5bcc;&#x7684;&#x6d4f;&#x89c8;&#x5668;&#xff0c;&#x5185;&#x7f6e; VPN &#x548c;&#x5e7f;&#x544a;&#x62e6;&#x622a;&#x5668;&#x7b49;&#x5b9e;&#x7528;&#x5de5;&#x5177;&#xff0c;&#x63d0;&#x5347;&#x7528;&#x6237;&#x9690;&#x79c1;&#x4fdd;&#x62a4;&#x548c;&#x6d4f;&#x89c8;&#x4f53;&#x9a8c;&#x3002;</li>
+      </ol>
+
+      <p>&#x5982;&#x679c;&#x4f60;&#x4e0d;&#x719f;&#x6089;&#x5982;&#x4f55;&#x5b89;&#x88c5;&#x6d4f;&#x89c8;&#x5668;&#x6216;&#x5bf9;&#x4e0d;&#x540c;&#x6d4f;&#x89c8;&#x5668;&#x7684;&#x9009;&#x62e9;&#x5b58;&#x5728;&#x7591;&#x95ee;&#xff0c;&#x53ef;&#x4ee5;&#x53c2;&#x8003;&#x5fae;&#x8f6f;&#x5b98;&#x65b9;&#x63d0;&#x4f9b;&#x7684;<a href="https://support.microsoft.com/zh-cn/microsoft-edge/%E5%88%87%E6%8D%A2%E5%88%B0-microsoft-edge-%E4%BB%A5%E8%8E%B7%E5%8F%96%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%B5%8F%E8%A7%88%E4%BD%93%E9%AA%8C-160fa918-d581-4932-9e4e-1075c4713595#:~:text=%E6%9C%89%E5%85%B3%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%20Microsoft%20Edge%20%E7%9A%84%E6%AD%A5%E9%AA%A4%201%20%E8%BD%AC%E5%88%B0%20Microsoft%20Edge,%E4%B8%8B%E8%BD%BD%20%E2%80%9D%E6%8C%89%E9%92%AE%E5%B9%B6%E5%90%8C%E6%84%8F%E6%9D%A1%E6%AC%BE%20%26%20%E6%9D%A1%E4%BB%B6%E3%80%82%205%20%E8%BF%90%E8%A1%8C%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%20-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B0%86%E5%9C%A8%E4%B8%8B%E8%BD%BD%E5%90%8E%E5%BC%80%E5%A7%8B%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85%E3%80%82">&#x5207;&#x6362;&#x5230; Microsoft Edge &#x4ee5;&#x83b7;&#x53d6;&#x66f4;&#x597d;&#x7684;&#x6d4f;&#x89c8;&#x4f53;&#x9a8c;</a>&#x6587;&#x7ae0;&#x4ee5;&#x5b66;&#x4e60;Microsoft Edge&#x7684;&#x4e0b;&#x8f7d;</p>
+
+      <h2>&#x914d;&#x7f6e; Tampermonkey &#x63d2;&#x4ef6;</h2>
+
+      <p>Tampermonkey &#x662f;&#x4e00;&#x6b3e;&#x6d41;&#x884c;&#x7684;&#x6d4f;&#x89c8;&#x5668;&#x6269;&#x5c55;&#xff0c;&#x5141;&#x8bb8;&#x7528;&#x6237;&#x5728;&#x7f51;&#x9875;&#x4e0a;&#x8fd0;&#x884c;&#x81ea;&#x5b9a;&#x4e49; JavaScript &#x811a;&#x672c;&#xff0c;&#x5b9e;&#x73b0;&#x81ea;&#x52a8;&#x5316;&#x4efb;&#x52a1;&#x548c;&#x4e2a;&#x6027;&#x5316;&#x529f;&#x80fd;&#x3002;&#x4e0b;&#x9762;&#x7b14;&#x8005;&#x4ecb;&#x7ecd;&#x5728; Microsoft Edge &#x6d4f;&#x89c8;&#x5668;&#x4e2d;&#x83b7;&#x53d6; Tampermonkey &#x63d2;&#x4ef6;&#x7684;&#x4e09;&#x79cd;&#x65b9;&#x6cd5;&#xff1a;</p>
+
+      <h3>&#x65b9;&#x6cd5;&#x4e00;&#xff1a;&#x4ece; Edge &#x5b98;&#x65b9;&#x63d2;&#x4ef6;&#x5546;&#x57ce;&#x83b7;&#x53d6;</h3>
+
+      <ol>
+        <li>&#x6253;&#x5f00; Edge &#x6d4f;&#x89c8;&#x5668;&#x3002;</li>
+        <li>&#x5728;&#x5730;&#x5740;&#x680f;&#x8f93;&#x5165;<code>edge://extensions/</code>&#xff0c;&#x6253;&#x5f00; edge &#x7ba1;&#x7406;&#x6269;&#x5c55;&#x3002;</li>
+        <li>&#x5728;&#x9875;&#x9762;&#x7684;&#x5de6;&#x4e0b;&#x89d2;&#xff0c;&#x6253;&#x5f00;"&#x5f00;&#x53d1;&#x8005;&#x6a21;&#x5f0f;"&#xff0c;&#x70b9;&#x51fb;"&#x83b7;&#x53d6;&#x6269;&#x5c55;&#x7a0b;&#x5e8f;"&#x94fe;&#x63a5;&#x3002;<br>
+        <img src="../assets/images/posts/2024-10-01/2.png" alt="edge://extensions" /></li>
+        <li>&#x5728; <a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=zh-CN">Edge &#x63d2;&#x4ef6;&#x5546;&#x57ce;</a>&#x4e2d;&#xff0c;&#x641c;&#x7d22;"Tampermonkey"&#x3002;<br>
+        <img src="../assets/images/posts/2024-10-01/3.png" alt="edge extensions store" /></li>
+        <li>&#x627e;&#x5230; <a href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN">Tampermonkey</a> &#x63d2;&#x4ef6;&#xff0c;&#x70b9;&#x51fb;"&#x83b7;&#x53d6;"&#x6309;&#x94ae;&#x3002;</li>
+        <li>&#x786e;&#x8ba4;&#x5b89;&#x88c5;&#xff0c;&#x63d2;&#x4ef6;&#x5b89;&#x88c5;&#x5b8c;&#x6210;&#x540e;&#xff0c;Tampermonkey &#x56fe;&#x6807;&#x5c06;&#x51fa;&#x73b0;&#x5728;&#x6d4f;&#x89c8;&#x5668;&#x5de5;&#x5177;&#x680f;&#x4e2d;&#x3002;
+        <img src="../assets/images/posts/2024-10-01/4.png" alt="edge extensions icons" /></li>
+      </ol>
+
+      <h3>&#x65b9;&#x6cd5;&#x4e8c;&#xff1a;&#x4ece;&#x6781;&#x7b80;&#x63d2;&#x4ef6;&#x7f51;&#x7ad9;&#x83b7;&#x53d6;</h3>
+
+      <p>&#x6781;&#x7b80;&#x63d2;&#x4ef6;&#x7f51;&#x7ad9;&#x662f;Chrome&#x6d4f;&#x89c8;&#x5668;&#x6269;&#x5c55;&#x63d2;&#x4ef6;&#x5546;&#x5e97;&#x7684;&#x642c;&#x8fd0;&#x5de5;&#xff0c;&#x65e0;&#x9700;&#x7ffb;&#x5899;&#x5373;&#x53ef;&#x8bbf;&#x95ee;&#x3002;</p>
+
+      <ol>
+        <li>&#x6253;&#x5f00; Edge &#x6d4f;&#x89c8;&#x5668;&#x3002;</li>
+        <li>&#x8bbf;&#x95ee;<a href="https://chrome.zzzmh.cn/">&#x6781;&#x7b80;&#x63d2;&#x4ef6;</a>&#x3002;</li>
+        <li>&#x901a;&#x8fc7;&#x641c;&#x7d22;&#x627e;&#x5230; <a href="https://chrome.zzzmh.cn/info/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> &#x63d2;&#x4ef6;&#x3002;</li>
+        <li>&#x70b9;&#x51fb;"&#x63a8;&#x8350;&#x4e0b;&#x8f7d;"&#x6216;"&#x5907;&#x7528;&#x4e0b;&#x8f7d;"&#x6309;&#x94ae;&#xff0c;&#x83b7;&#x5f97;&#x5305;&#x542b;&#x63d2;&#x4ef6;&#x7684;&#x5b89;&#x88c5;&#x5305;&#xff0c;&#x89e3;&#x538b;&#x5e76;&#x83b7;&#x5f97;&#x63d2;&#x4ef6;&#x6587;&#x4ef6;&#x3002;<br>
+        <img src="../assets/images/posts/2024-10-01/5.png" alt="jijian-extension" /></li>
+        <li>&#x5728;&#x5730;&#x5740;&#x680f;&#x8f93;&#x5165;<code>edge://extensions/</code>&#xff0c;&#x6253;&#x5f00; edge &#x7ba1;&#x7406;&#x6269;&#x5c55;&#xff0c;&#x8bbe;&#x7f6e;&#x5de6;&#x4fa7;&#x7684;<code>&#x5f00;&#x53d1;&#x4eba;&#x5458;&#x6a21;&#x5f0f;</code>&#x4e3a;&#x5f00;&#x542f;&#x3002;
+        <img src="../assets/images/posts/2024-10-01/3.png" alt="edge://extensions/" /></li>
+        <li>&#x5c06; Tampermonkey &#x63d2;&#x4ef6;&#x4ece;&#x6587;&#x4ef6;&#x8d44;&#x6e90;&#x7ba1;&#x7406;&#x5668;&#x62d6;&#x5165;edge &#x7ba1;&#x7406;&#x6269;&#x5c55;&#x9875;&#x9762;&#x4e2d;&#x3002;</li>
+        <li>&#x786e;&#x8ba4;&#x5b89;&#x88c5;&#xff0c;&#x63d2;&#x4ef6;&#x5b89;&#x88c5;&#x5b8c;&#x6210;&#x540e;&#xff0c;Tampermonkey &#x56fe;&#x6807;&#x5c06;&#x51fa;&#x73b0;&#x5728;&#x6d4f;&#x89c8;&#x5668;&#x5de5;&#x5177;&#x680f;&#x4e2d;&#x3002;
+        <img src="../assets/images/posts/2024-10-01/4.png" alt="edge extensions icons" /></li>
+      </ol>
+
+      <h3>&#x65b9;&#x6cd5;&#x4e09;&#xff1a;&#x4ece; Google Chrome &#x63d2;&#x4ef6;&#x5546;&#x57ce;&#x83b7;&#x53d6;</h3>
+      <p>&#x672c;&#x65b9;&#x6cd5;&#x9700;&#x8981;&#x6d77;&#x5916;&#x7f51;&#x7edc;&#x8fde;&#x63a5;&#xff0c;&#x8bf7;&#x8bfb;&#x8005;&#x81ea;&#x884c;&#x914d;&#x7f6e;&#x3002;</p>
+
+      <ol>
+        <li>&#x6253;&#x5f00; Edge &#x6d4f;&#x89c8;&#x5668;&#x3002;</li>
+        <li>&#x8bbf;&#x95ee; <a href="https://chrome.google.com/webstore">Google Chrome &#x63d2;&#x4ef6;&#x5546;&#x57ce;</a>&#x3002;</li>
+        <li>&#x5728;&#x641c;&#x7d22;&#x6846;&#x4e2d;&#x8f93;&#x5165;"Tampermonkey"&#xff0c;&#x6309;&#x4e0b; Enter &#x952e;&#x3002;</li>
+        <li>&#x627e;&#x5230; Tampermonkey &#x63d2;&#x4ef6;&#xff0c;&#x70b9;&#x51fb;""&#x6dfb;&#x52a0;&#x5230; Chrome"&#x6309;&#x94ae;&#x3002;</li>
+        <li>&#x6d4f;&#x89c8;&#x5668;&#x4f1a;&#x63d0;&#x793a;&#x4f60;&#x786e;&#x8ba4;&#x5b89;&#x88c5;&#xff0c;&#x70b9;&#x51fb;""&#x6dfb;&#x52a0;&#x6269;&#x5c55;&#x7a0b;&#x5e8f;"&#x3002;</li>
+        <li>&#x5b89;&#x88c5;&#x5b8c;&#x6210;&#x540e;&#xff0c;Tampermonkey &#x56fe;&#x6807;&#x5c06;&#x51fa;&#x73b0;&#x5728;&#x6d4f;&#x89c8;&#x5668;&#x5de5;&#x5177;&#x680f;&#x4e2d;&#x3002;</li>
+      </ol>
+
+      <h2>&#x5b89;&#x88c5; &#x8d85;&#x661f;&#x5b78;&#x7fd2;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;[&#x4e00;&#x9375;&#x555f;&#x52d5;][&#x6700;&#x5c0f;&#x5316;&#x904b;&#x884c;] &#x63d2;&#x4ef6;</h2>
+      <p><em>&#x8d85;&#x661f;&#x5b78;&#x7fd2;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;[&#x4e00;&#x9375;&#x555f;&#x52d5;][&#x6700;&#x5c0f;&#x5316;&#x904b;&#x884c;] &#x63d2;&#x4ef6;&#x4ec5;&#x4f5c;&#x4e3a;&#x4e00;&#x4e2a;<strong>&#x6f14;&#x793a;&#x63d2;&#x4ef6;</strong>&#xff0c;&#x8bfb;&#x8005;&#x4e5f;&#x53ef;&#x4ee5;&#x81ea;&#x884c;&#x9009;&#x62e9;&#x66f4;&#x597d;&#x7684;&#x63d2;&#x4ef6;&#xff0c;&#x5e76;&#x5206;&#x4eab;&#x5230;&#x8bc4;&#x8bba;&#x533a;</em></p>
+
+      <p>&#x8d85;&#x661f;&#x5b66;&#x4e60;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;&#x662f;&#x4e00;&#x6b3e;&#x7528;&#x4e8e;&#x81ea;&#x52a8;&#x5316;&#x5237;&#x8bfe;&#x7684;JavaScript &#x811a;&#x672c;&#xff0c;&#x8be5;&#x811a;&#x672c;&#x57fa;&#x4e8e; Tampermonkey &#x63d2;&#x4ef6;&#x8fd0;&#x884c;&#x3002;&#x4ee5;&#x4e0b;&#x662f;&#x5b89;&#x88c5;&#x8be5;&#x63d2;&#x4ef6;&#x7684;&#x65b9;&#x6cd5;&#xff1a;</p>
+
+      <h3>&#x4ece;GreasyFork&#x83b7;&#x53d6;&#x811a;&#x672c;</h3>
+
+      <ol>
+        <li>&#x70b9;&#x51fb; Tampermonkey &#x63d2;&#x4ef6;&#x56fe;&#x6807;&#x3002;</li>
+        <li>&#x70b9;&#x51fb;&#x83b7;&#x53d6;&#x65b0;&#x811a;&#x672c;&#xff0c;&#x8fdb;&#x5165;<a href="https://www.tampermonkey.net/scripts.php"> Tampermonkey &#x811a;&#x672c;&#x9ec4;&#x9875;</a>
+        <img src="../assets/images/posts/2024-10-01/6.png" alt="get new" /></li>
+        <li>&#x70b9;&#x51fb; GreasyFork &#x94fe;&#x63a5;&#xff0c;&#x8fdb;&#x5165; <a href="https://greasyfork.org/zh-CN">GreasyFork&#x5b98;&#x7f51;</a>
+        <img src="../assets/images/posts/2024-10-01/7.png" alt="greasyfork" /></li>
+        <li>&#x641c;&#x7d22;""&#x8d85;&#x661f;&#x5b66;&#x4e60;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;"&#xff0c;&#x627e;&#x5230;&#x8be5;<a href="https://greasyfork.org/zh-CN/scripts/469522-%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%B9%9D%E4%B9%9D%E5%8A%A9%E6%89%8B-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-%E6%9C%80%E5%B0%8F%E5%8C%96%E8%BF%90%E8%A1%8C">&#x811a;&#x672c;</a>&#x9875;&#x9762;&#xff0c;&#x70b9;&#x51fb;""&#x5b89;&#x88c5;"
+        <img src="../assets/images/posts/2024-10-01/8.png" alt="chaoxing99" /></li>
+        <li>&#x5728;&#x5f39;&#x51fa;&#x7684; Tampermonkey &#x9875;&#x9762;&#x4e2d;&#xff0c;&#x70b9;&#x51fb;&#x5b89;&#x88c5;&#x3002;</li>
+      </ol>
+
+      <h2>&#x5982;&#x4f55;&#x5237;&#x8bfe;</h2>
+
+      <ol>
+        <li>&#x6253;&#x5f00;<a href="https://v8.chaoxing.com/">&#x8d85;&#x661f;&#x5b66;&#x4e60;&#x901a;</a>&#x3002;</li>
+        <li>&#x767b;&#x5f55;&#x8d26;&#x53f7;&#xff0c;&#x6253;&#x5f00;&#x8981;&#x5237;&#x7684;&#x8bfe;&#x3002;</li>
+        <li>&#x70b9;&#x51fb;&#x5f39;&#x51fa;&#x7684;&#x5237;&#x8bfe;&#x5f39;&#x7a97;&#x3002;
+        <img src="../assets/images/posts/2024-10-01/9.png" alt="tanchuang" /></li>
+        <li>&#x70b9;&#x51fb;&#x95ef;&#x5173;&#x6a21;&#x5f0f;&#x5f00;&#x59cb;&#x5237;&#x8bfe;&#xff08;&#x8bfb;&#x8005;&#x53ef;&#x81ea;&#x884c;&#x8d2d;&#x4e70;&#x9898;&#x5e93;token&#xff09;&#x3002;</li>
+        <li><strong>&#x6ca1;&#x6709;&#x914d;&#x7f6e;&#x672c;&#x5730;&#x670d;&#x52a1;&#x5668;&#x7684;&#x540c;&#x5b66;&#x9700;&#x8981;&#x4fdd;&#x6301;&#x5237;&#x8bfe;&#x9875;&#x9762;&#x662f;&#x88ab;&#x9009;&#x4e2d;&#x72b6;&#x6001;</strong>
+        <img src="../assets/images/posts/2024-10-01/10.png" alt="shuake" /></li>
+      </ol>
+
+      <h2>&#x8fdb;&#x9636;</h2>
+      <p>&#x6b64;&#x90e8;&#x5206;&#x7b14;&#x8005;&#x8fd8;&#x672a;&#x5b8c;&#x6210;&#xff0c;&#x4f46;&#x8bfb;&#x8005;&#x53ef;&#x4ee5;&#x5728;&#x4ee5;&#x4e0b;&#x9875;&#x9762;&#x627e;&#x5230;&#x652f;&#x6301;&#xff1a;</p>
+
+      <ol>
+        <li><a href="https://greasyfork.org/zh-CN/scripts/469522-%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%B9%9D%E4%B9%9D%E5%8A%A9%E6%89%8B-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-%E6%9C%80%E5%B0%8F%E5%8C%96%E8%BF%90%E8%A1%8C/code">&#x3010;&#x8fdb;&#x9636;&#x3011;&#x914d;&#x7f6e;&#x672c;&#x5730;&#x670d;&#x52a1;&#x5668;</a>
+        <img src="../assets/images/posts/2024-10-01/11.png" alt="local server" /></li>
+        <li>&#x3010;&#x8fdb;&#x9636;&#x3011;&#x914d;&#x7f6e;&#x9898;&#x5e93;</li>
+      </ol>
+
+      <h2>Reference</h2>
+
+      <ol>
+        <li><a href="https://www.chromium.org/chromium-projects/">The Chromium Projects</a></li>
+        <li><a href="https://github.com/Tampermonkey/tampermonkey">Tampermonkey</a></li>
+        <li><a href="https://greasyfork.org/zh-CN/scripts/469522-%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%B9%9D%E4%B9%9D%E5%8A%A9%E6%89%8B-%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8-%E6%9C%80%E5%B0%8F%E5%8C%96%E8%BF%90%E8%A1%8C/code">Greasy Fork-&#x8d85;&#x661f;&#x5b66;&#x4e60;&#x901a;&#x4e5d;&#x4e5d;&#x52a9;&#x624b;</a></li>
+      </ol>
+
+      <hr />
+      <p class="footnote">[1] &#x672c;&#x6587;&#x6240;&#x4ecb;&#x7ecd;&#x7684;&#x5185;&#x5bb9;&#x4ec5;&#x4f5c;&#x4e3a;&#x6280;&#x672f;&#x63a2;&#x7d22;&#x548c;&#x5b66;&#x4e60;&#x4ea4;&#x6d41;&#x4e4b;&#x7528;&#xff0c;&#x610f;&#x5728;&#x5206;&#x4eab;&#x4e00;&#x4e9b;&#x5173;&#x4e8e;&#x81ea;&#x52a8;&#x5316;&#x811a;&#x672c;&#x548c;&#x6280;&#x672f;&#x5e94;&#x7528;&#x7684;&#x77e5;&#x8bc6;&#x4e0e;&#x7ecf;&#x9a8c;&#x3002;&#x6587;&#x4e2d;&#x6d89;&#x53ca;&#x7684;&#x6240;&#x6709;&#x64cd;&#x4f5c;&#x65b9;&#x6cd5;&#x3001;&#x5de5;&#x5177;&#x53ca;&#x7b2c;&#x4e09;&#x65b9;&#x8d44;&#x6e90;&#xff08;&#x5305;&#x62ec;&#x4f46;&#x4e0d;&#x9650;&#x4e8e;&#x81ea;&#x52a8;&#x5316;&#x811a;&#x672c;&#x3001;&#x9898;&#x5e93;&#x7b49;&#xff09;&#xff0c;&#x4ec5;&#x4f9b;&#x8bfb;&#x8005;&#x53c2;&#x8003;&#xff0c;&#x4f5c;&#x8005;<strong>&#x4e0d;&#x5bf9;&#x4efb;&#x4f55;&#x4eba;&#x5728;&#x672a;&#x7ecf;&#x6388;&#x6743;&#x60c5;&#x51b5;&#x4e0b;&#x4f7f;&#x7528;&#x8fd9;&#x4e9b;&#x5de5;&#x5177;&#x3001;&#x811a;&#x672c;&#x6216;&#x8d44;&#x6e90;&#x627f;&#x62c5;&#x4efb;&#x4f55;&#x8d23;&#x4efb;&#x3002;</strong>&#x8bf7;&#x8bfb;&#x8005;&#x52a1;&#x5fc5;&#x9075;&#x5b88;&#x76f8;&#x5173;&#x6cd5;&#x5f8b;&#x6cd5;&#x89c4;&#x53ca;&#x5e73;&#x53f0;&#x7684;&#x4f7f;&#x7528;&#x89c4;&#x5b9a;&#xff0c;&#x4e0d;&#x5f97;&#x4f7f;&#x7528;&#x672c;&#x6587;&#x4e2d;&#x7684;&#x65b9;&#x6cd5;&#x4ece;&#x4e8b;&#x4efb;&#x4f55;&#x8fdd;&#x53cd;&#x8d85;&#x661f;&#x5b66;&#x4e60;&#x901a;&#x5e73;&#x53f0;&#x89c4;&#x5219;&#x3001;&#x4fb5;&#x72af;&#x4ed6;&#x4eba;&#x6743;&#x76ca;&#x6216;&#x4e0d;&#x6b63;&#x5f53;&#x7ade;&#x4e89;&#x7684;&#x884c;&#x4e3a;&#x3002;&#x4efb;&#x4f55;&#x56e0;&#x6ee5;&#x7528;&#x8fd9;&#x4e9b;&#x6280;&#x672f;&#x5bfc;&#x81f4;&#x7684;&#x540e;&#x679c;&#x5747;&#x7531;&#x8bfb;&#x8005;&#x81ea;&#x884c;&#x627f;&#x62c5;&#xff0c;&#x4e0e;&#x4f5c;&#x8005;&#x65e0;&#x5173;&#x3002;</p>
+      <p class="footnote">[2] &#x540c;&#x65f6;&#xff0c;&#x672c;&#x6587;&#x6240;&#x63d0;&#x53ca;&#x7684;&#x7b2c;&#x4e09;&#x65b9;&#x8d44;&#x6e90;&#xff08;&#x5982;&#x9898;&#x5e93;&#x7b49;&#xff09;&#x5747;&#x4e3a;&#x4f5c;&#x8005;&#x53c2;&#x8003;&#x8d44;&#x6599;&#xff0c;&#x4f5c;&#x8005;&#x4e0d;&#x5bf9;&#x5176;<strong>&#x51c6;&#x786e;&#x6027;&#x3001;&#x5408;&#x6cd5;&#x6027;&#x3001;&#x5b9e;&#x65f6;&#x6027;</strong>&#x7b49;&#x505a;&#x51fa;&#x4efb;&#x4f55;&#x4fdd;&#x8bc1;&#x3002;&#x8bf7;&#x8bfb;&#x8005;&#x81ea;&#x884c;&#x5224;&#x65ad;&#x5176;&#x6709;&#x6548;&#x6027;&#xff0c;&#x5e76;&#x5728;&#x5408;&#x6cd5;&#x5408;&#x89c4;&#x7684;&#x524d;&#x63d0;&#x4e0b;&#x4f7f;&#x7528;&#x3002;</p>
+    </div>
+  </article>
+
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../posts/index.html">&larr; All posts</a>
+      <span class="dot">·</span>
+      <a href="../hello/index.html">When I'm not researching</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(t) { html.setAttribute('data-theme', t); document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : ''; document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none'; localStorage.setItem('theme', t); }
+  toggle.addEventListener('click', () => { setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>

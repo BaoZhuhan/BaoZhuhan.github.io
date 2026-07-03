@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KMP Algorithm Study Notes — How I Learned KMP · Zhuhan Bao</title>
+  <meta name="description" content="KMP算法学习笔记-我是如何学会KMP算法的. Study notes on learning the KMP algorithm, including prefix function and step-by-step derivation." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+<main class="page_wrap article_wrap">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm"><a href="../hello/index.html" class="header_back">When I'm not researching</a></h1>
+        <div class="header_buttons">
+          <a href="../posts/index.html" class="lang_btn" title="All posts">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme_icon_moon" style="display:none" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <header class="article_header">
+      <h1 class="article_title">KMP Algorithm Study Notes — How I Learned KMP</h1>
+      <div class="article_meta">
+        <time class="article_date">Sep 15, 2024</time>
+        <span class="article_tag">C/C++</span>
+        <span class="article_tag">DSA</span>
+        <span class="article_tag">Notes</span>
+      </div>
+    </header>
+    <div class="article_body">
+      <h2>&#x6211;&#x770b;&#x8fc7;&#x7684;&#x5b66;&#x4e60;&#x8d44;&#x6599;</h2>
+      <blockquote><p>1. <a href="https://www.bilibili.com/video/BV1AY4y157yL">&#x6700;&#x6d45;&#x663e;&#x6613;&#x61c2;&#x7684; KMP &#x7b97;&#x6cd5;&#x8bb2;&#x89e3;</a><br>
+      &#x63a8;&#x8350;&#x6307;&#x6570;&#xff1a;&#x2b50;&#x2b50;&#x2b50;&#x2b50;<br>
+      2. <a href="https://www.bilibili.com/video/BV1Er421K7kF">KMP &#x5b66;&#x4e00;&#x904d;&#x5fd8;&#x4e00;&#x904d;&#xff1f;ACM &#x91d1;&#x724c;&#x9009;&#x624b;&#x7528;&#x53ef;&#x89c6;&#x5316;......</a><br>
+      &#x63a8;&#x8350;&#x6307;&#x6570;&#xff1a;&#x2b50;&#x2b50;&#x2b50;<br>
+      3. <a href="https://oi-wiki.org/string/kmp/">&#x524d;&#x7f00;&#x51fd;&#x6570;&#x4e0e; KMP &#x7b97;&#x6cd5;</a><br>
+      &#x63a8;&#x8350;&#x6307;&#x6570;&#xff1a;&#x2b50;&#x2b50;&#x2b50;&#x2b50;</p></blockquote>
+
+      <h2>&#x6211;&#x662f;&#x5982;&#x4f55;&#x5b66;&#x4f1a;KMP&#x7b97;&#x6cd5;&#x7684;</h2>
+
+      <p>&#x5bf9;&#x4e8e;&#x6d59;&#x5927;&#x57ce;&#x5e02;&#x5b66;&#x9662;&#x7684;&#x540c;&#x5b66;&#x800c;&#x8a00;&#xff0c;&#x6211;&#x4eec;&#x7684;&#x6559;&#x6750;&#x662f;&#x4ece;"next&#x6570;&#x7ec4;"&#x7684;&#x89d2;&#x5ea6;&#x53bb;&#x8bb2;&#x89e3;KMP&#x7b97;&#x6cd5;&#x7684;&#xff0c;&#x4f46;&#x6211;&#x5e76;&#x4e0d;&#x8ba4;&#x4e3a;&#x8fd9;&#x662f;&#x4e00;&#x79cd;&#x4f18;&#x96c5;&#x7684;&#x65b9;&#x5f0f;&#xff0c;&#x6211;&#x8d8b;&#x5411;&#x4e8e;&#x5148;&#x6309;&#x7167;KMP&#x7b97;&#x6cd5;&#x7684;&#x539f;&#x7406;&#x53bb;&#x4e86;&#x89e3;&#x8fd9;&#x4e2a;&#x7b97;&#x6cd5;&#x7684;&#x672c;&#x8d28;&#xff0c;&#x7136;&#x540e;&#x81ea;&#x5df1;&#x63a8;&#x6f14;&#x7b97;&#x6cd5;&#x7684;&#x4ee3;&#x7801;&#xff0c;&#x5e76;&#x4e14;&#x548c;&#x7f51;&#x7edc;&#x4e0a;&#x5e7f;&#x6cdb;&#x8ba4;&#x53ef;&#x7684;&#x4ee3;&#x7801;&#x76f8;&#x6bd4;&#x8f83;&#x3002;&#x6700;&#x540e;&#x518d;&#x4e86;&#x89e3;&#x4e00;&#x4e0b;&#x6559;&#x79d1;&#x4e66;&#x662f;&#x5982;&#x4f55;&#x8bb2;&#x89e3;KMP&#x7b97;&#x6cd5;&#x7684;&#xff08;&#x4ec5;&#x4ec5;&#x4e3a;&#x4e86;&#x8003;&#x8bd5;&#xff09;&#x3002;</p>
+
+      <h3>&#x524d;&#x7f6e;&#x77e5;&#x8bc6;</h3>
+
+      <ol>
+        <li>C&#x8bed;&#x8a00;&#x57fa;&#x7840;</li>
+        <li>&#x6570;&#x636e;&#x7ed3;&#x6784;"&#x4e32;"</li>
+      </ol>
+      <blockquote><p>&#x867d;&#x7136;&#x6559;&#x79d1;&#x4e66;&#x548c;&#x8001;&#x5e08;&#x7684;PPT&#x4f1a;&#x628a;&#x4e32;&#x5b9a;&#x4e49;&#x6210;&#x6781;&#x5176;&#x590d;&#x6742;&#x7684;&#x6570;&#x636e;&#x7ed3;&#x6784;&#xff0c;&#x4f46;&#x662f;&#x6211;&#x4eec;&#x53ea;&#x9700;&#x8981;&#x4e86;&#x89e3;&#x4e32;&#x5c31;&#x662f;&#x5b57;&#x7b26;&#x4e32;&#x5c31;&#x597d;&#x4e86;&#x3002;&#x4f60;&#x53ef;&#x4ee5;&#x4f7f;&#x7528;&#x7c7b;&#x4f3c;<code>char str[1024]</code>&#x6216;&#x8005;<code>char *str = (char*)malloc(1024 * sizeof(char))</code>&#x7684;&#x65b9;&#x6cd5;&#x53bb;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x4e32;&#x3002;</p></blockquote>
+
+      <h3>&#x4e86;&#x89e3;&#x524d;&#x7f00;&#x6570;&#x7ec4;</h3>
+
+      <p>&#x901a;&#x8fc7;Oi Wiki&#x7684;&#x5b66;&#x4e60;&#xff0c;&#x6211;&#x4e86;&#x89e3;&#x4e86;&#x524d;&#x7f00;&#x6570;&#x7ec4;&#x7684;&#x5b9a;&#x4e49;&#x3002;</p>
+
+      <p>&#x4ee5;&#x4e0b;&#x5185;&#x5bb9;&#x5f15;&#x7528;&#x81ea;<a href="https://oi-wiki.org/string/kmp/#%E5%89%8D%E7%BC%80%E5%87%BD%E6%95%B0">Oi Wiki</a>&#xff1a;</p>
+
+      <blockquote><p>&#x5b57;&#x7b26;&#x4e32;&#x524d;&#x7f00;&#x548c;&#x540e;&#x7f00;&#x5b9a;&#x4e49;</p>
+      <p>&#x5173;&#x4e8e;&#x5b57;&#x7b26;&#x4e32;&#x524d;&#x7f00;&#x3001;&#x771f;&#x524d;&#x7f00;&#xff0c;&#x540e;&#x7f00;&#x3001;&#x771f;&#x540e;&#x7f00;&#x7684;&#x5b9a;&#x4e49;&#x8be6;&#x89c1; <a href="./basic.md">&#x5b57;&#x7b26;&#x4e32;&#x57fa;&#x7840;</a></p>
+      <p>&#x524d;&#x7f00;&#x51fd;&#x6570;</p>
+      <p>&#x5b9a;&#x4e49;</p>
+      <p>&#x7ed9;&#x5b9a;&#x4e00;&#x4e2a;&#x957f;&#x5ea6;&#x4e3a; n &#x7684;&#x5b57;&#x7b26;&#x4e32; s&#xff0c;&#x5176; <strong>&#x524d;&#x7f00;&#x51fd;&#x6570;</strong> &#x88ab;&#x5b9a;&#x4e49;&#x4e3a;&#x4e00;&#x4e2a;&#x957f;&#x5ea6;&#x4e3a; n &#x7684;&#x6570;&#x7ec4; $\pi$&#x3002;
+      &#x5176;&#x4e2d; $\pi[i]$ &#x7684;&#x5b9a;&#x4e49;&#x662f;&#xff1a;</p>
+      <p>1.  &#x5982;&#x679c;&#x5b50;&#x4e32; $s[0\dots i]$ &#x6709;&#x4e00;&#x5bf9;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x4e0e;&#x771f;&#x540e;&#x7f00;&#xff1a;$s[0\dots k-1]$ &#x548c; $s[i - (k - 1) \dots i]$&#xff0c;&#x90a3;&#x4e48; $\pi[i]$ &#x5c31;&#x662f;&#x8fd9;&#x4e2a;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#xff08;&#x6216;&#x8005;&#x771f;&#x540e;&#x7f00;&#xff0c;&#x56e0;&#x4e3a;&#x5b83;&#x4eec;&#x76f8;&#x7b49;&#xff09;&#x7684;&#x957f;&#x5ea6;&#xff0c;&#x4e5f;&#x5c31;&#x662f; $\pi[i]=k$&#xff1b;</p>
+      <p>2.  &#x5982;&#x679c;&#x4e0d;&#x6b62;&#x6709;&#x4e00;&#x5bf9;&#x76f8;&#x7b49;&#x7684;&#xff0c;&#x90a3;&#x4e48; $\pi[i]$ &#x5c31;&#x662f;&#x5176;&#x4e2d;&#x6700;&#x957f;&#x7684;&#x90a3;&#x4e00;&#x5bf9;&#x7684;&#x957f;&#x5ea6;&#xff1b;</p>
+      <p>3.  &#x5982;&#x679c;&#x6ca1;&#x6709;&#x76f8;&#x7b49;&#x7684;&#xff0c;&#x90a3;&#x4e48; $\pi[i]=0$&#x3002;</p>
+      <p>&#x7b80;&#x5355;&#x6765;&#x8bf4; $\pi[i]$ &#x5c31;&#x662f;&#xff0c;&#x5b50;&#x4e32; $s[0\dots i]$ &#x6700;&#x957f;&#x7684;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x4e0e;&#x771f;&#x540e;&#x7f00;&#x7684;&#x957f;&#x5ea6;&#x3002;</p>
+      <p>&#x7528;&#x6570;&#x5b66;&#x8bed;&#x8a00;&#x63cf;&#x8ff0;&#x5982;&#x4e0b;&#xff1a;</p>
+      <p><em>$\pi[i] = \max_{k = 0 \dots i}\{k: s[0 \dots k - 1] = s[i - (k - 1) \dots i]\}$</em></p>
+      <p>&#x7279;&#x522b;&#x5730;&#xff0c;&#x89c4;&#x5b9a; $\pi[0]=0$&#x3002;</p>
+      <p>&#x8fc7;&#x7a0b;</p>
+      <p>&#x4e3e;&#x4f8b;&#x6765;&#x8bf4;&#xff0c;&#x5bf9;&#x4e8e;&#x5b57;&#x7b26;&#x4e32; <code>abcabcd</code>&#xff0c;</p>
+      <p>$\pi[0]=0$&#xff0c;&#x56e0;&#x4e3a; <code>a</code> &#x6ca1;&#x6709;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;&#xff0c;&#x6839;&#x636e;&#x89c4;&#x5b9a;&#x4e3a; 0</p>
+      <p>$\pi[1]=0$&#xff0c;&#x56e0;&#x4e3a; <code>ab</code> &#x65e0;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;</p>
+      <p>$\pi[2]=0$&#xff0c;&#x56e0;&#x4e3a; <code>abc</code> &#x65e0;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;</p>
+      <p>$\pi[3]=1$&#xff0c;&#x56e0;&#x4e3a; <code>abca</code> &#x53ea;&#x6709;&#x4e00;&#x5bf9;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;&#xff1a;<code>a</code>&#xff0c;&#x957f;&#x5ea6;&#x4e3a; 1</p>
+      <p>$\pi[4]=2$&#xff0c;&#x56e0;&#x4e3a; <code>abcab</code> &#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;&#x53ea;&#x6709; <code>ab</code>&#xff0c;&#x957f;&#x5ea6;&#x4e3a; 2</p>
+      <p>$\pi[5]=3$&#xff0c;&#x56e0;&#x4e3a; <code>abcabc</code> &#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;&#x53ea;&#x6709; <code>abc</code>&#xff0c;&#x957f;&#x5ea6;&#x4e3a; 3</p>
+      <p>$\pi[6]=0$&#xff0c;&#x56e0;&#x4e3a; <code>abcabcd</code> &#x65e0;&#x76f8;&#x7b49;&#x7684;&#x771f;&#x524d;&#x7f00;&#x548c;&#x771f;&#x540e;&#x7f00;</p>
+      <p>&#x540c;&#x7406;&#x53ef;&#x4ee5;&#x8ba1;&#x7b97;&#x5b57;&#x7b26;&#x4e32; <code>aabaaab</code> &#x7684;&#x524d;&#x7f00;&#x51fd;&#x6570;&#x4e3a; $[0, 1, 0, 1, 2, 2, 3]$&#x3002;</p></blockquote>
+
+      <h3>&#x4e86;&#x89e3;KMP&#x7b97;&#x6cd5;&#x7684;&#x5927;&#x81f4;&#x539f;&#x7406;</h3>
+      <p>&#x5728;&#x4e86;&#x89e3;&#x524d;&#x7f00;&#x6570;&#x7ec4;&#x540e;&#xff0c;&#x7ed3;&#x5408;&#x5bf9;OI Wiki&#x7684;&#x4e00;&#x70b9;&#x70b9;&#x89e3;&#x8bfb;&#xff0c;&#x6211;&#x521d;&#x6b65;&#x4e86;&#x89e3;&#x4e86;KMP&#x7b97;&#x6cd5;&#x7684;<strong>&#x5927;&#x81f4;&#x539f;&#x7406;</strong>&#xff1a;</p>
+
+      <blockquote><p>&#x7ed9;&#x5b9a;&#x4e00;&#x4e2a;&#x6587;&#x672c; t &#x548c;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x4e32; s&#xff0c;&#x5c1d;&#x8bd5;&#x627e;&#x5230;&#x5e76;&#x5c55;&#x793a; s &#x5728; t &#x4e2d;&#x7684;&#x6240;&#x6709;&#x51fa;&#x73b0;&#x3002;</p>
+      <p>&#x6211;&#x4eec;&#x6784;&#x9020;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x4e32; s + # + t&#xff0c;&#x5176;&#x4e2d; # &#x4e3a;&#x4e00;&#x4e2a;&#x65e2;&#x4e0d;&#x51fa;&#x73b0;&#x5728; s &#x4e2d;&#x4e5f;&#x4e0d;&#x51fa;&#x73b0;&#x5728; t &#x4e2d;&#x7684;&#x5206;&#x9694;&#x7b26;&#x3002;&#x5982;&#x679c;&#x7b49;&#x5f0f; $\pi[i] = n$ &#x6210;&#x7acb;&#xff0c;&#x5219;&#x610f;&#x5473;&#x7740; s &#x5b8c;&#x6574;&#x51fa;&#x73b0;&#x5728;&#x8be5;&#x4f4d;&#x7f6e;&#xff08;&#x5373;&#x5176;&#x53f3;&#x7aef;&#x70b9;&#x4f4d;&#x4e8e;&#x4f4d;&#x7f6e; i&#xff09;&#x3002;&#x6ce8;&#x610f;&#x8be5;&#x4f4d;&#x7f6e;&#x7684;&#x4e0b;&#x6807;&#x662f;&#x5bf9;&#x5b57;&#x7b26;&#x4e32; s + # + t &#x800c;&#x8a00;&#x7684;&#x3002;</p></blockquote>
+
+      <h3>&#x901a;&#x8fc7;&#x89c6;&#x9891;&#x7b80;&#x8981;&#x4e86;&#x89e3;KMP&#x7b97;&#x6cd5;&#x7684;&#x5b9e;&#x73b0;&#x65b9;&#x6cd5;</h3>
+
+      <blockquote><p>2. <a href="https://www.bilibili.com/video/BV1Er421K7kF">KMP &#x5b66;&#x4e00;&#x904d;&#x5fd8;&#x4e00;&#x904d;&#xff1f;ACM &#x91d1;&#x724c;&#x9009;&#x624b;&#x7528;&#x53ef;&#x89c6;&#x5316;......</a><br>
+      &#x63a8;&#x8350;&#x6307;&#x6570;&#xff1a;&#x2b50;&#x2b50;&#x2b50;</p></blockquote>
+
+      <h3>&#x624b;&#x63a8;&#x524d;&#x7f00;&#x6570;&#x7ec4;&#x6a21;&#x578b;</h3>
+
+      <pre><code>int* my_pre(char* s, int* pi){
+    pi = (int*)malloc(strlen(s) * sizeof(int));
+    pi[0] = 0;
+    int len = strlen(s);
+
+    for(int i = 1; i &lt; len; i++){
+        int j = pi[i - 1];
+        while(j &gt; 0 &amp;&amp; s[i] != s[j]){
+            j = pi[j - 1];
+        }
+        if(s[i] == s[j]) j++;
+        pi[i] = j;
+    }
+    return pi;
+}</code></pre>
+
+      <p>&#x5728;&#x8fd9;&#x4e00;&#x6b65;&#x6700;&#x91cd;&#x8981;&#x7684;&#x662f;&#x63a8;&#x51fa;&#xff1a;</p>
+      <pre><code>        int j = pi[i - 1];
+        while(j &gt; 0 &amp;&amp; s[i] != s[j]){
+            j = pi[j - 1];
+        }</code></pre>
+
+      <p>&#x4e5f;&#x5c31;&#x662f;&#x5f53;&#x65b0;&#x7684;&#x5b57;&#x7b26;&#x4e0d;&#x5339;&#x914d;&#x65f6;&#x5019;&#x7684;&#x5faa;&#x73af;&#x9000;&#x56de;&#x3002;</p>
+
+      <h3>&#x624b;&#x63a8;KMP&#x7b97;&#x6cd5;</h3>
+
+      <p>&#x8fc7;&#x6389;Pintia&#x9898;&#x76ee;&#xff1a;</p>
+
+      <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int* my_pre(char* s, int* pi, int len){
+    pi = (int*)malloc(strlen(s) * sizeof(int));
+    pi[0] = 0;
+
+    for(int i = 1; i &lt; len; i++){
+        int j = pi[i - 1];
+        while(j &gt; 0 &amp;&amp; s[i] != s[j]){
+            j = pi[j - 1];
+        }
+        if(s[i] == s[j]) j++;
+        pi[i] = j;
+    }
+    return pi;
+}
+
+int main(){
+    char s[1024];
+    char t[1024];
+
+    fgets(t, 1024, stdin);
+    fgets(s, 1024, stdin);
+
+    s[strcspn(s, "\n")] = 0;
+    t[strcspn(t, "\n")] = 0;
+
+    int slen = strlen(s);
+
+    char n[1024];
+    strcpy(n, s);
+    n[slen] = '#';
+    strcpy(n + slen + 1, t);
+
+    int nlen = strlen(n);
+
+    for(int i = 0; i &lt; nlen; i++){
+        if(n[i] &gt;= 'a' &amp;&amp; n[i] &lt;= 'z'){
+            n[i] = n[i] - 'a' + 'A';
+        }
+    }
+
+    int* pi = my_pre(n, pi, nlen);
+
+    for(int i = slen; i &lt; nlen; i++){
+        if(pi[i] == slen){
+            printf("%d\n", i - slen - slen);
+        }
+    }
+
+    // printf("\n%s\n", n);
+    // for(int i = 0; i &lt; nlen; i++){
+    //     printf("%d", pi[i]);
+    // }
+
+    return 0;
+}</code></pre>
+
+      <h2>&#x5237;&#x9898;</h2>
+
+      <ol>
+        <li>&#x9898;&#x76ee;&#x6765;&#x6e90;&#xff1a;<a href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/description/">LeetCode-28. &#x627e;&#x51fa;&#x5b57;&#x7b26;&#x4e32;&#x4e2d;&#x7b2c;&#x4e00;&#x4e2a;&#x5339;&#x914d;&#x9879;&#x7684;&#x4e0b;&#x6807;</a></li>
+      </ol>
+
+      <p>My answer:</p>
+
+      <pre><code>int* pre(char* str, int len){
+    int* pi = (int*)malloc(len * sizeof(int));
+    pi[0] = 0;
+    for(int i = 1; i &lt; len; i++){
+        int j = pi[i - 1];
+        while(j &gt; 0 &amp;&amp; str[i] != str[j]){
+            j = pi[j - 1];
+        }
+        if(str[i] == str[j]){
+            j++;
+        }
+        pi[i] = j;
+    }
+    return pi;
+}
+
+int strStr(char* haystack, char* needle){
+    int haystack_len = 0, needle_len = 0;
+
+    while(needle[needle_len] != '\0'){ needle_len++; }
+    while(haystack[haystack_len] != '\0'){ haystack_len++; }
+
+    //KMP Algo
+    char* str = (char*)malloc(20005 * sizeof(char));
+
+    for(int i = 0; i &lt; needle_len; i++){
+        str[i] = needle[i];
+    }
+    str[needle_len] = '#';
+    for(int i = 0; i &lt; haystack_len; i++){
+        str[needle_len + 1 + i] = haystack[i];
+    }
+    str[needle_len + haystack_len + 1] = '\0';
+
+    int* pi = pre(str, needle_len + haystack_len + 1);
+
+    for(int i = needle_len; i &lt; needle_len + haystack_len + 1; i++){
+        if(pi[i] == needle_len){
+            free(pi);
+            free(str);
+            return (i - needle_len * 2);
+        }
+    }
+
+    free(pi);
+    free(str);
+    return -1;
+}</code></pre>
+    </div>
+  </article>
+
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../posts/index.html">&larr; All posts</a>
+      <span class="dot">·</span>
+      <a href="../hello/index.html">When I'm not researching</a>
+    </div>
+  </footer>
+</main>
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(t) { html.setAttribute('data-theme', t); document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : ''; document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none'; localStorage.setItem('theme', t); }
+  toggle.addEventListener('click', () => { setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>

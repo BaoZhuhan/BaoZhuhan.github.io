@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When I'm not researching · Zhuhan Bao</title>
+  <meta name="description" content="Life and posts — when I'm not researching." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <style>
+    /* ---------- Hero ---------- */
+    .hello_hero {
+      margin-top: 56px;
+      text-align: left;
+    }
+
+    .hello_hero_title {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .hello_hero_desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* ---------- Section headers ---------- */
+    .hello_section_head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 64px;
+      margin-bottom: 24px;
+    }
+
+    .hello_section_title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .hello_section_link {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .hello_section_link:hover {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: var(--border);
+    }
+
+    /* ---------- Life cards ---------- */
+    .life_cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .life_card {
+      border: 1px solid var(--border-light);
+      transition: border-color 0.25s ease, transform 0.25s ease;
+      text-decoration: none;
+      display: block;
+    }
+
+    .life_card:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
+    }
+
+    .life_card_thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .life_card_thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .life_card_body {
+      padding: 14px 16px 16px;
+      background: var(--bg-card);
+    }
+
+    .life_card_label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .life_card_sub {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-family: var(--font-mono);
+    }
+
+    .life_card_thumb.cream { background: var(--accent-cream); }
+    .life_card_thumb.rose  { background: var(--accent-rose); }
+    .life_card_thumb.mint  { background: var(--accent-mint); }
+
+    /* ---------- Posts list ---------- */
+    .post_list { }
+
+    .post_card {
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+      text-decoration: none;
+      transition: padding 0.2s;
+    }
+
+    .post_card:last-of-type {
+      border-bottom: none;
+    }
+
+    .post_card:hover {
+      padding-left: 8px;
+    }
+
+    .post_card_top {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .post_card_date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    .post_card_tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .post_card_tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 1px 8px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      letter-spacing: 0.02em;
+    }
+
+    .post_card_title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .post_card_excerpt {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 720px) {
+      .life_cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hello_hero_title {
+        font-size: 1.8rem;
+      }
+
+      .hello_section_title {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hello_hero_title {
+        font-size: 1.5rem;
+      }
+
+      .hello_section_head {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main class="page_wrap page_wrap_life">
+
+  <!-- ========== HEADER ========== -->
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name site_name_sm">
+          <a href="../index.html" class="header_back">Zhuhan Bao</a>
+        </h1>
+        <div class="header_buttons">
+          <a href="../index.html" class="lang_btn" title="Back to homepage">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme_icon_moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hello_hero">
+    <h2 class="hello_hero_title">When I'm not researching</h2>
+    <p class="hello_hero_desc">
+      A corner for everything else — photos I've taken, things I've built,
+      and notes I wanted to keep.
+    </p>
+  </section>
+
+  <!-- ========== LIFE ========== -->
+  <div class="hello_section_head">
+    <h3 class="hello_section_title">Life</h3>
+    <a href="../life/index.html" class="hello_section_link">View all →</a>
+  </div>
+
+  <div class="life_cards">
+
+    <a href="../life/index.html" class="life_card">
+      <div class="life_card_thumb cream">
+        <span>🌅</span>
+      </div>
+      <div class="life_card_body">
+        <div class="life_card_label">Sunset at HZCU</div>
+        <div class="life_card_sub">Jul 1, 2026 · Hangzhou</div>
+      </div>
+    </a>
+
+    <a href="#" class="life_card" style="pointer-events:none;opacity:0.6;">
+      <div class="life_card_thumb rose">
+        <span>☕</span>
+      </div>
+      <div class="life_card_body">
+        <div class="life_card_label">Quiet Mornings</div>
+        <div class="life_card_sub">Coming soon</div>
+      </div>
+    </a>
+
+    <a href="#" class="life_card" style="pointer-events:none;opacity:0.6;">
+      <div class="life_card_thumb mint">
+        <span>🚲</span>
+      </div>
+      <div class="life_card_body">
+        <div class="life_card_label">Weekend Rides</div>
+        <div class="life_card_sub">Coming soon</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ========== POSTS ========== -->
+  <div class="hello_section_head">
+    <h3 class="hello_section_title">Posts</h3>
+    <a href="../posts/index.html" class="hello_section_link">View all →</a>
+  </div>
+
+  <div class="post_list">
+
+    <a href="../posts/2025-03-04-learning-route.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Mar 2025</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Report</span>
+        </span>
+      </div>
+      <div class="post_card_title">Learning Route Planning for 25 Spring</div>
+      <p class="post_card_excerpt">GPU operator kernel development, CUDA programming, deep learning with PyTorch — a semester roadmap.</p>
+    </a>
+
+    <a href="../posts/2024-10-21-cmu15418-week1.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Oct 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">CMU-15-418</span>
+        </span>
+      </div>
+      <div class="post_card_title">Weekly Report 1 for CMU-15-418</div>
+      <p class="post_card_excerpt">Parallelizing Mandelbrot generation with ISPC — spatial decomposition and performance analysis.</p>
+    </a>
+
+    <a href="../posts/2024-10-03-orthogonal-list.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Oct 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">DSA</span>
+          <span class="post_card_tag">Notes</span>
+        </span>
+      </div>
+      <div class="post_card_title">How I Learned Orthogonal List (Cross Linked List)</div>
+      <p class="post_card_excerpt">Sparse matrix chain storage — from enums and unions to a full AC implementation.</p>
+    </a>
+
+    <a href="../posts/2024-10-01-chaoxing-automation.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Oct 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Configuration</span>
+        </span>
+      </div>
+      <div class="post_card_title">How to Automate "chaoxing.com"</div>
+      <p class="post_card_excerpt">A guide to setting up automated course-watching tools with Chromium, Tampermonkey, and user scripts.</p>
+    </a>
+
+    <a href="../posts/2024-09-15-kmp-algorithm.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Sep 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">DSA</span>
+          <span class="post_card_tag">C/C++</span>
+          <span class="post_card_tag">Notes</span>
+        </span>
+      </div>
+      <div class="post_card_title">KMP Algorithm Study Notes — How I Learned KMP</div>
+      <p class="post_card_excerpt">From prefix functions to LeetCode — a step-by-step derivation of the KMP algorithm.</p>
+    </a>
+
+    <a href="../posts/2024-09-12-winget-guide.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Sep 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Configuration</span>
+        </span>
+      </div>
+      <div class="post_card_title">Update System Software with Winget (No VPN Required)</div>
+      <p class="post_card_excerpt">Using Microsoft's winget tool to manage software updates with domestic mirrors.</p>
+    </a>
+
+    <a href="../posts/2024-08-29-makefile-notes.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Aug 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">C/C++</span>
+          <span class="post_card_tag">Notes</span>
+        </span>
+      </div>
+      <div class="post_card_title">Makefile Beginner Study Notes</div>
+      <p class="post_card_excerpt">Quick-start guide to Makefile — from single-file compilation to step-by-step builds.</p>
+    </a>
+
+    <a href="../posts/2024-08-27-it-career-dev.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Aug 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Python</span>
+          <span class="post_card_tag">Assignment</span>
+        </span>
+      </div>
+      <div class="post_card_title">IT Career Development Training 1 — Exercise Reference</div>
+      <p class="post_card_excerpt">Python solutions to 10 programming exercises, from seat classification to ID validation.</p>
+    </a>
+
+    <a href="../posts/2024-07-01-academic-integrity.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Jul 2024</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Statement</span>
+        </span>
+      </div>
+      <div class="post_card_title">Academic Integrity Statement</div>
+      <p class="post_card_excerpt">An important notice about homework sharing, copyright, and academic ethics.</p>
+    </a>
+
+    <a href="../posts/2023-08-10-vscode-debug.html" class="post_card">
+      <div class="post_card_top">
+        <span class="post_card_date">Aug 2023</span>
+        <span class="post_card_tags">
+          <span class="post_card_tag">Configuration</span>
+          <span class="post_card_tag">C/C++</span>
+        </span>
+      </div>
+      <div class="post_card_title">How to Fix Debugging Issues in VSCode</div>
+      <p class="post_card_excerpt">Fixing the "program does not exist" error in VSCode by correcting launch.json paths.</p>
+    </a>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site_footer" style="margin-top:64px;">
+    <div class="footer_links">
+      <a href="../index.html">← Back to homepage</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // Theme toggle
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+
+  function setTheme(t) {
+    html.setAttribute('data-theme', t);
+    if (document.querySelector('.theme_icon_sun')) {
+      document.querySelector('.theme_icon_sun').style.display = t === 'dark' ? 'none' : '';
+      document.querySelector('.theme_icon_moon').style.display = t === 'dark' ? '' : 'none';
+    }
+    localStorage.setItem('theme', t);
+  }
+
+  toggle.addEventListener('click', () => {
+    setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+
+</body>
+</html>
