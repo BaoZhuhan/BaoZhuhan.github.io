@@ -600,20 +600,35 @@ section {
   text-align: center;
 }
 
-/* ---------- Honors grid ---------- */
-.honors_grid {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* ---------- Honors ---------- */
+.honor_list {
+  list-style: none;
 }
 
-.honor_pill {
-  padding: 12px 20px;
-  font-size: 0.88rem;
+.honor_item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.honor_item:last-of-type {
+  border-bottom: none;
+}
+
+.honor_rank {
+  flex-shrink: 0;
+  min-width: 140px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding-top: 2px;
+}
+
+.honor_text {
   color: var(--text-secondary);
-  border: 1px solid var(--border-light);
-  background: var(--bg-card);
-  line-height: 1.5;
 }
 
 /* ---------- Skills ---------- */
