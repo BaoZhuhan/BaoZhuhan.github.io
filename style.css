@@ -127,15 +127,19 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 6px;
-  font-size: 0.7rem;
-  font-family: var(--font-mono);
-  font-weight: 600;
+  padding: 4px 7px;
+  font-size: 0.92rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
   line-height: 1;
   color: var(--text-muted);
   text-decoration: none;
   letter-spacing: 0.03em;
   transition: color 0.25s ease;
+}
+
+.lang_btn svg {
+  display: block;
 }
 
 .lang_btn:hover {
@@ -248,6 +252,25 @@ a:hover {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 14px;
+}
+
+.bio_life_link {
+  margin-top: 14px;
+  font-size: 0.88rem;
+}
+
+.life_link {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.life_link:hover {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
 }
 
 .tag {
@@ -637,11 +660,183 @@ section {
   color: var(--text-muted);
 }
 
+.footer_link_dim {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.footer_link_dim:hover {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+}
+
 .footer_copy {
   font-size: 0.75rem;
   color: var(--text-light);
   font-family: var(--font-mono);
   margin-top: 8px;
+}
+
+/* ============================================================
+   LIFE / "When I am not doing research" — Xiaohongshu-style
+   ============================================================ */
+
+.page_wrap_life {
+  max-width: 960px;
+}
+
+/* Header back link */
+.header_back {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.header_back:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--border);
+}
+
+/* Hero */
+.life_hero {
+  margin-top: 56px;
+  text-align: left;
+  max-width: 720px;
+}
+
+.life_hero_title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.life_hero_desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* Masonry grid — CSS columns */
+.life_grid {
+  margin-top: 40px;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.life_card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  transition: border-color 0.2s ease;
+}
+
+.life_card:hover {
+  border-color: var(--border);
+}
+
+.life_card_img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.life_card_img_label {
+  font-size: 2.2rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.life_card:hover .life_card_img_label {
+  opacity: 0.8;
+}
+
+.life_card_body {
+  padding: 14px 16px 16px;
+}
+
+.life_card_textonly {
+  background: transparent;
+  border-color: var(--border);
+}
+
+.life_card_textonly .life_card_body {
+  padding: 20px 16px;
+}
+
+.life_card_date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.life_card_text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Tall card */
+.life_card_tall .life_card_img {
+  aspect-ratio: 3 / 4;
+}
+
+/* Wide card */
+.life_card_wide .life_card_img {
+  aspect-ratio: 16 / 10;
+}
+
+/* Dark mode: dim photo placeholders */
+[data-theme="dark"] .life_card_img {
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+/* Responsive grid */
+@media (max-width: 820px) {
+  .life_grid {
+    column-count: 2;
+    column-gap: 16px;
+  }
+
+  .life_card {
+    margin-bottom: 16px;
+  }
+
+  .life_hero_title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .life_grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .life_hero_title {
+    font-size: 1.35rem;
+  }
+
+  .life_hero_desc {
+    font-size: 0.9rem;
+  }
 }
 
 /* ============================================================
