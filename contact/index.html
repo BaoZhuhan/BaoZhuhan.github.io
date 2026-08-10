@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Zhuhan Bao</title>
+  <meta name="description" content="Email Zhuhan Bao, check free/busy availability, or send a Zoom meeting invitation." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+<main class="page_wrap contact_wrap">
+  <header class="site_header">
+    <div class="header_inner">
+      <div class="header_top">
+        <h1 class="site_name contact_title">Contact</h1>
+        <div class="header_buttons">
+          <a href="../index.html" class="lang_btn" title="Back to homepage" aria-label="Back to homepage">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          </a>
+          <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
+            <svg class="theme_icon_sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+            <svg class="theme_icon_moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="site_tagline">Email · availability · Zoom</p>
+    </div>
+  </header>
+
+  <section class="contact_intro" aria-labelledby="contact_intro_title">
+    <p class="contact_kicker">Get in touch</p>
+    <h2 id="contact_intro_title">Choose the simplest way to reach me.</h2>
+    <p>For a new conversation, start with email. If we are arranging a meeting, check the live free/busy calendar before sending an invitation.</p>
+  </section>
+
+  <section class="contact_email" aria-labelledby="email_title">
+    <div>
+      <p class="contact_kicker">Email</p>
+      <h2 id="email_title">Start a conversation</h2>
+    </div>
+    <a class="contact_primary_link" href="mailto:hengyuhan3762@gmail.com">hengyuhan3762@gmail.com <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="contact_calendar" aria-labelledby="calendar_title">
+    <div class="contact_section_head">
+      <div>
+        <p class="contact_kicker">Availability</p>
+        <h2 id="calendar_title">Free / busy calendar</h2>
+      </div>
+      <p>Live · Asia/Shanghai</p>
+    </div>
+    <div class="calendar_frame">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=hengyuhan3762%40gmail.com&amp;ctz=Asia%2FShanghai&amp;mode=WEEK&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0"
+        title="Zhuhan Bao free and busy calendar"
+        loading="lazy"></iframe>
+    </div>
+    <p class="calendar_note">Event details remain hidden when the Google Calendar sharing permission is set to “See only free/busy”.</p>
+  </section>
+
+  <section class="contact_zoom" aria-labelledby="zoom_title">
+    <div class="contact_zoom_copy">
+      <p class="contact_kicker">Zoom</p>
+      <h2 id="zoom_title">Send a meeting invitation</h2>
+      <p>After we agree on a time, create the Zoom meeting and invite <strong>hengyuhan3762@gmail.com</strong>. Please include the topic, timezone, and agenda.</p>
+    </div>
+    <div class="contact_zoom_actions">
+      <a class="contact_primary_link" href="https://zoom.us/meeting/schedule" target="_blank" rel="noopener">Schedule in Zoom <span aria-hidden="true">↗</span></a>
+      <a class="contact_secondary_link" href="mailto:hengyuhan3762@gmail.com?subject=Zoom%20meeting%20invitation">Email the invitation</a>
+    </div>
+  </section>
+
+  <footer class="site_footer">
+    <div class="footer_links">
+      <a href="../index.html">Home</a><span class="dot">·</span><a href="../life/index.html">Life</a><span class="dot">·</span><a href="../posts/index.html">Posts</a>
+    </div>
+    <p class="footer_copy">&copy; 2026 Zhuhan Bao.</p>
+  </footer>
+</main>
+
+<script>
+  const toggle = document.getElementById('theme_toggle');
+  const html = document.documentElement;
+  function setTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    document.querySelector('.theme_icon_sun').style.display = theme === 'dark' ? 'none' : '';
+    document.querySelector('.theme_icon_moon').style.display = theme === 'dark' ? '' : 'none';
+    localStorage.setItem('theme', theme);
+  }
+  toggle.addEventListener('click', () => setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+</script>
+</body>
+</html>

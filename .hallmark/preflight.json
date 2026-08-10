@@ -1,0 +1,8 @@
+{
+  "date": "2026-08-10",
+  "framework": "vanilla HTML, CSS, and JavaScript",
+  "font_stack": "Georgia display, system sans body, system monospace labels",
+  "palette": "warm ivory, slate ink, clay accent",
+  "motion": "CSS transitions and IntersectionObserver; no motion library",
+  "preserved": ["font stack", "palette", "zero-framework architecture", "light/dark theme"]
+}

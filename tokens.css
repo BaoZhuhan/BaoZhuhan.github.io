@@ -1,0 +1,62 @@
+/* Anthropic-inspired design tokens for BaoZhuhan.github.io */
+:root {
+  --ivory-light: #f0eee6;
+  --ivory-medium: #e8e6dc;
+  --ivory-dark: #dcd9ce;
+  --slate-dark: #141413;
+  --slate-medium: #4a4a48;
+  --slate-light: #87867f;
+  --slate-faded: #b0aea5;
+  --cloud-light: #f5f4f0;
+  --accent-warm: #d97757;
+  --accent-warm-light: #f5e6e0;
+  --accent-cream: #efe1c4;
+  --accent-sage: #788c5d;
+  --accent-rose: #ebcece;
+  --accent-mint: #bcd1ca;
+
+  --bg: var(--ivory-light);
+  --bg-card: #faf9f4;
+  --bg-card-hover: #f5f4ee;
+  --text: var(--slate-dark);
+  --text-secondary: var(--slate-medium);
+  --text-muted: var(--slate-light);
+  --text-light: var(--slate-faded);
+  --border: #e0ded6;
+  --border-light: #e8e6e0;
+  --accent: var(--slate-dark);
+  --accent-hover: #3a3a38;
+
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', Menlo, monospace;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --max-width: 720px;
+  --radius: 0;
+  --radius-pill: 100px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-normal: 250ms;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a18;
+  --bg-card: #222220;
+  --bg-card-hover: #2a2a28;
+  --text: #e8e6e0;
+  --text-secondary: #b0aea5;
+  --text-muted: #87867f;
+  --text-light: #6a6863;
+  --border: #333230;
+  --border-light: #2a2927;
+  --accent: #e8e6e0;
+  --accent-hover: #f5f4ee;
+}
