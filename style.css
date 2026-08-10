@@ -1,5 +1,5 @@
 /* Hallmark · macrostructure: Long Document · tone: editorial · anchor hue: clay · theme: studied-DNA (source: https://www.anthropic.com/research) · studied: yes */
-/* Hallmark · pre-emit critique: P5 H4 E4 S5 R5 V4 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
 @import url('tokens.css');
 /* ============================================================
    Zhuhan Bao — Anthropic-inspired Academic Homepage
@@ -22,7 +22,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
-  transition: background 0.35s ease, color 0.35s ease;
+  transition: background var(--dur-normal) var(--ease-in-out), color var(--dur-normal) var(--ease-in-out);
   overflow-x: clip;
 }
 
@@ -42,7 +42,7 @@ a {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--border);
-  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+  transition: text-decoration-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
 
 a:hover {
@@ -90,7 +90,7 @@ a:hover {
   color: var(--text-muted);
   text-decoration: none;
   letter-spacing: 0.03em;
-  transition: color 0.25s ease;
+  transition: color var(--dur-normal) var(--ease-out);
 }
 
 .lang_btn svg {
@@ -120,7 +120,7 @@ a:hover {
   padding: 4px 6px;
   line-height: 1;
   color: var(--text-muted);
-  transition: color 0.25s ease;
+  transition: color var(--dur-normal) var(--ease-out);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,7 +242,7 @@ a:hover {
   color: var(--text-muted);
   border: 1px solid var(--border-light);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
   background: var(--bg-card);
 }
 
@@ -269,7 +269,7 @@ a:hover {
   color: var(--ivory-light);
   background: var(--slate-dark);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
 }
 
 .cv_btn:hover {
@@ -349,7 +349,7 @@ section {
   color: var(--text-muted);
   cursor: pointer;
   padding: 4px 0;
-  transition: color 0.2s ease;
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 .news_toggle:hover { color: var(--text); }
@@ -362,7 +362,7 @@ section {
   margin-bottom: 16px;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
 }
 
 .entry_card:last-child { margin-bottom: 0; }
@@ -473,7 +473,7 @@ section {
   margin-bottom: 12px;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  transition: background 0.2s ease;
+  transition: background var(--dur-fast) var(--ease-out);
 }
 
 .pub_card:last-of-type { margin-bottom: 0; }
@@ -664,6 +664,15 @@ section {
 
 .article_wrap {
   max-width: 720px;
+  min-width: 0;
+}
+
+.article_wrap > article,
+.article_header,
+.article_body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .article_header {
@@ -860,17 +869,18 @@ section {
 
 /* ---------- Editorial post artwork ---------- */
 .post_feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
-  gap: clamp(24px, 5vw, 56px);
-  align-items: center;
+  position: relative;
+  min-height: 148px;
   padding: 28px 0;
+  padding-inline-end: clamp(224px, 30vw, 280px);
   border-bottom: 1px solid var(--border-light);
 }
 
 .post_feature:last-child { border-bottom: none; }
 
 .post_feature .post_card {
+  display: block;
+  width: 100%;
   min-width: 0;
   text-decoration: none;
 }
@@ -916,32 +926,53 @@ section {
 }
 
 .post_art_link {
+  position: absolute;
+  z-index: var(--z-raised);
+  inset-inline-end: 0;
+  top: 50%;
   display: block;
+  width: clamp(156px, 20vw, 184px);
+  max-width: 100%;
   text-decoration: none;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   overflow: clip;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + var(--space-sm)));
+  transition: opacity var(--dur-fast) var(--ease-out),
+              transform var(--dur-normal) var(--ease-out);
 }
 
 .post_art_link img {
   display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: transform var(--dur-normal) var(--ease-out);
 }
 
-.post_feature:hover .post_art_link img { transform: scale(1.015); }
+.post_feature:hover .post_art_link,
+.post_feature:focus-within .post_art_link {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
 
 .article_hero_art {
-  margin: 28px 0 40px;
+  width: min(100%, 544px);
+  max-width: 100%;
+  margin: 28px auto 40px;
   border: 1px solid var(--border-light);
   background: var(--bg-card);
+  overflow: clip;
 }
 
 .article_hero_art img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
@@ -1146,14 +1177,28 @@ section {
 
   .social_bar { justify-content: center; }
 
-  .post_feature,
   .contact_email,
   .contact_zoom {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .post_feature { gap: 18px; }
-  .post_art_link { order: -1; }
+  .post_feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 88px;
+    gap: 16px;
+    align-items: center;
+    min-height: 0;
+    padding: 24px 0;
+  }
+
+  .post_art_link {
+    position: static;
+    width: 88px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
+  }
 
   .contact_section_head {
     align-items: flex-start;
@@ -1205,4 +1250,24 @@ section {
   .bio_avatar { width: 80px; height: 80px; }
   .social_link span { display: none; }
   .social_link { padding: 6px 10px; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .post_feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 88px;
+    gap: 16px;
+    align-items: center;
+    min-height: 0;
+    padding: 24px 0;
+  }
+
+  .post_art_link {
+    position: static;
+    width: 88px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
+  }
 }
