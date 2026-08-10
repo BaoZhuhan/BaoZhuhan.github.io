@@ -7,57 +7,6 @@
   <meta name="description" content="All blog posts." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <style>
-    .post_list_full {
-      margin-top: 40px;
-    }
-    .post_list_full .post_card {
-      display: block;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border-light);
-      text-decoration: none;
-      transition: padding 0.2s;
-    }
-    .post_list_full .post_card:last-of-type {
-      border-bottom: none;
-    }
-    .post_list_full .post_card:hover {
-      padding-left: 8px;
-    }
-    .post_list_full .post_card_top {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-    .post_list_full .post_card_date {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-light);
-      flex-shrink: 0;
-    }
-    .post_list_full .post_card_tag {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      padding: 1px 8px;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-    }
-    .post_list_full .post_card_title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-    .post_list_full .post_card_excerpt {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin: 0;
-    }
-  </style>
 </head>
 <body>
 <main class="page_wrap page_wrap_life">
@@ -66,7 +15,7 @@
       <div class="header_top">
         <h1 class="site_name site_name_sm" style="font-size:1.6rem;">All Posts</h1>
         <div class="header_buttons">
-          <a href="../hello/index.html" class="lang_btn" title="Back">
+          <a href="../index.html" class="lang_btn" title="Back to homepage">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           </a>
           <button id="theme_toggle" class="theme_btn" aria-label="Toggle theme">
@@ -81,6 +30,7 @@
 
   <div class="post_list_full">
 
+    <article class="post_feature">
     <a href="2025-03-04-learning-route.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Mar 2025</span>
@@ -89,7 +39,10 @@
       <div class="post_card_title">Learning Route Planning for 25 Spring</div>
       <p class="post_card_excerpt">GPU operator kernel development, CUDA programming, deep learning with PyTorch — a semester roadmap.</p>
     </a>
+    <a class="post_art_link" href="2025-03-04-learning-route.html" aria-label="Read Learning Route Planning for 25 Spring"><img src="../assets/images/posts/illustrations/2025-03-04-learning-route.png" alt="Hand-drawn learning path from a chip through a book to a spark" loading="eager" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-10-21-cmu15418-week1.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Oct 2024</span>
@@ -98,7 +51,10 @@
       <div class="post_card_title">Weekly Report 1 for CMU-15-418</div>
       <p class="post_card_excerpt">Parallelizing Mandelbrot generation with ISPC — spatial decomposition and performance analysis.</p>
     </a>
+    <a class="post_art_link" href="2024-10-21-cmu15418-week1.html" aria-label="Read Weekly Report 1 for CMU-15-418"><img src="../assets/images/posts/illustrations/2024-10-21-cmu15418-week1.png" alt="Hand-drawn fractal divided into parallel work tiles" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-10-03-orthogonal-list.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Oct 2024</span>
@@ -107,7 +63,10 @@
       <div class="post_card_title">How I Learned Orthogonal List (Cross Linked List)</div>
       <p class="post_card_excerpt">Sparse matrix chain storage — from enums and unions to a full AC implementation.</p>
     </a>
+    <a class="post_art_link" href="2024-10-03-orthogonal-list.html" aria-label="Read How I Learned Orthogonal List"><img src="../assets/images/posts/illustrations/2024-10-03-orthogonal-list.png" alt="Hand-drawn sparse crossing grid with connected nodes" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-10-01-chaoxing-automation.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Oct 2024</span>
@@ -116,7 +75,10 @@
       <div class="post_card_title">How to Automate "chaoxing.com"</div>
       <p class="post_card_excerpt">A guide to setting up automated course-watching tools with Chromium, Tampermonkey, and user scripts.</p>
     </a>
+    <a class="post_art_link" href="2024-10-01-chaoxing-automation.html" aria-label="Read How to Automate chaoxing.com"><img src="../assets/images/posts/illustrations/2024-10-01-chaoxing-automation.png" alt="Hand-drawn browser workflow operated by a simple crank" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-09-15-kmp-algorithm.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Sep 2024</span>
@@ -125,7 +87,10 @@
       <div class="post_card_title">KMP Algorithm Study Notes — How I Learned KMP</div>
       <p class="post_card_excerpt">From prefix functions to LeetCode — a step-by-step derivation of the KMP algorithm.</p>
     </a>
+    <a class="post_art_link" href="2024-09-15-kmp-algorithm.html" aria-label="Read KMP Algorithm Study Notes"><img src="../assets/images/posts/illustrations/2024-09-15-kmp-algorithm.png" alt="Hand-drawn repeating ribbon examined through a magnifying lens" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-09-12-winget-guide.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Sep 2024</span>
@@ -134,7 +99,10 @@
       <div class="post_card_title">Update System Software with Winget (No VPN Required)</div>
       <p class="post_card_excerpt">Using Microsoft's winget tool to manage software updates with domestic mirrors.</p>
     </a>
+    <a class="post_art_link" href="2024-09-12-winget-guide.html" aria-label="Read Update System Software with Winget"><img src="../assets/images/posts/illustrations/2024-09-12-winget-guide.png" alt="Hand-drawn winged software package moving through an update loop" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-08-29-makefile-notes.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Aug 2024</span>
@@ -143,7 +111,10 @@
       <div class="post_card_title">Makefile Beginner Study Notes</div>
       <p class="post_card_excerpt">Quick-start guide to Makefile — from single-file compilation to step-by-step builds.</p>
     </a>
+    <a class="post_art_link" href="2024-08-29-makefile-notes.html" aria-label="Read Makefile Beginner Study Notes"><img src="../assets/images/posts/illustrations/2024-08-29-makefile-notes.png" alt="Hand-drawn build instructions turning source pieces into a structure" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-08-27-it-career-dev.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Aug 2024</span>
@@ -152,7 +123,10 @@
       <div class="post_card_title">IT Career Development Training 1 — Exercise Reference</div>
       <p class="post_card_excerpt">Python solutions to 10 programming exercises, from seat classification to ID validation.</p>
     </a>
+    <a class="post_art_link" href="2024-08-27-it-career-dev.html" aria-label="Read IT Career Development Training"><img src="../assets/images/posts/illustrations/2024-08-27-it-career-dev.png" alt="Hand-drawn programming toolbox beside a path of stepping stones" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2024-07-01-academic-integrity.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Jul 2024</span>
@@ -161,7 +135,10 @@
       <div class="post_card_title">Academic Integrity Statement</div>
       <p class="post_card_excerpt">An important notice about homework sharing, copyright, and academic ethics.</p>
     </a>
+    <a class="post_art_link" href="2024-07-01-academic-integrity.html" aria-label="Read Academic Integrity Statement"><img src="../assets/images/posts/illustrations/2024-07-01-academic-integrity.png" alt="Hand-drawn balance holding an open book and a lock" loading="lazy" /></a>
+    </article>
 
+    <article class="post_feature">
     <a href="2023-08-10-vscode-debug.html" class="post_card">
       <div class="post_card_top">
         <span class="post_card_date">Aug 2023</span>
@@ -170,12 +147,14 @@
       <div class="post_card_title">How to Fix Debugging Issues in VSCode</div>
       <p class="post_card_excerpt">Fixing the "program does not exist" error in VSCode by correcting launch.json paths.</p>
     </a>
+    <a class="post_art_link" href="2023-08-10-vscode-debug.html" aria-label="Read How to Fix Debugging Issues in VSCode"><img src="../assets/images/posts/illustrations/2023-08-10-vscode-debug.png" alt="Hand-drawn tangled debugging cable becoming a clean connected path" loading="lazy" /></a>
+    </article>
 
   </div>
 
   <footer class="site_footer" style="margin-top:64px;">
     <div class="footer_links">
-      <a href="../hello/index.html">← Back</a>
+      <a href="../index.html">← Back to homepage</a>
     </div>
   </footer>
 </main>
