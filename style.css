@@ -493,6 +493,18 @@ section {
   color: var(--text-secondary);
   margin-bottom: 6px;
   line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.pub_authors a {
+  color: inherit;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+
+.pub_authors a:hover {
+  color: var(--text);
+  text-decoration-color: currentColor;
 }
 
 .pub_venue {
