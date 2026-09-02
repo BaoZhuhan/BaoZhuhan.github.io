@@ -393,6 +393,14 @@ section {
   max-height: 69px;
 }
 
+/* Duke-NUS wordmark is wide; let it overflow the logo column slightly */
+.entry_logo img.logo_dukenus {
+  flex-shrink: 0;
+  max-width: none;
+  width: 125px;
+  max-height: 36px;
+}
+
 /* Dark mode: invert all institution logos to white */
 [data-theme="dark"] .entry_logo img {
   filter: brightness(0) invert(1) !important;
@@ -1229,6 +1237,11 @@ section {
 
   .entry_logo img {
     max-height: 60px;
+  }
+
+  .entry_logo img.logo_dukenus {
+    width: 150px;
+    max-height: 40px;
   }
 
   .news_item {
