@@ -320,6 +320,7 @@ section {
 .news_item.news_hidden {
   display: none;
 }
+.news_toggle[hidden] { display: none !important; }
 
 .news_date {
   flex-shrink: 0;
@@ -339,7 +340,8 @@ section {
   font-weight: 600;
 }
 
-.news_toggle {
+.news_toggle,
+.content_toggle {
   display: block;
   margin-top: 12px;
   background: none;
@@ -352,7 +354,9 @@ section {
   transition: color var(--dur-fast) var(--ease-out);
 }
 
-.news_toggle:hover { color: var(--text); }
+.news_toggle:hover,
+.content_toggle:hover { color: var(--text); }
+.section_collapsed_item[hidden] { display: none !important; }
 
 /* ---------- Entry card (Education, Research, Projects, Teaching, Leadership) ---------- */
 .entry_card {
@@ -477,11 +481,26 @@ section {
 
 /* ---------- Publications ---------- */
 .pub_card {
+  position: relative;
   padding: 24px 28px;
   margin-bottom: 12px;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   transition: background var(--dur-fast) var(--ease-out);
+}
+
+.pub_card::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  width: 52px;
+  height: 52px;
+  background: var(--text-muted);
+  opacity: 0.1;
+  -webkit-mask: url("assets/images/rod_of_asclepius.svg") center / contain no-repeat;
+  mask: url("assets/images/rod_of_asclepius.svg") center / contain no-repeat;
+  pointer-events: none;
 }
 
 .pub_card:last-of-type { margin-bottom: 0; }
@@ -537,6 +556,7 @@ section {
   font-size: 0.82rem;
   font-family: var(--font-mono);
   color: var(--text-muted);
+  padding-right: 60px;
 }
 
 .pub_links a {
@@ -644,6 +664,21 @@ section {
   color: var(--text-light);
   font-family: var(--font-mono);
   margin-top: 8px;
+}
+
+.visitor_badge {
+  display: inline-flex;
+  margin-top: 14px;
+  opacity: 0.82;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.visitor_badge:hover { opacity: 1; }
+
+.visitor_badge img {
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 /* ============================================================
