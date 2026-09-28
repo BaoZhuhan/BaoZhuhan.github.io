@@ -55,22 +55,11 @@
       </div>
       <div class="bio_text">
         <p>
-          Hi! I'm <strong>Zhuhan Bao (鲍竹涵)</strong>, a senior undergraduate majoring in
-          Software Engineering at <a href="http://www.hzcu.edu.cn/" target="_blank">Hangzhou City University</a>.
-          I am currently a Visiting Scholar at Duke-NUS Medical School, Singapore,
-          and a remote visiting student at Duke University School of Medicine.
+          My name is <strong>Zhuhan Bao (鲍竹涵)</strong>.
+          I am currently a Visiting Scholar at Duke-NUS Medical School, Singapore, working with
+          <a href="https://www.duke-nus.edu.sg/directory/detail/liu-nan" target="_blank">Prof. Nan Liu</a>.
+          I also serve as a Researcher on the <a href="https://github.com/orgs/Touchstone-AI-Lab/teams/benchmark-research" target="_blank" rel="noopener noreferrer">Benchmark Research Team</a> at <a href="https://touchstoneai.org/" target="_blank" rel="noopener noreferrer">TouchStone AI</a>.
         </p>
-        <p>
-          I work with <a href="https://www.duke-nus.edu.sg/directory/detail/liu-nan" target="_blank">Prof. Nan Liu</a> at the Centre for Biomedical Data Science, Duke-NUS,
-          and with <a href="https://biostat.duke.edu/profile/chuan-hong" target="_blank">Prof. Chuan Hong</a>'s research group at Duke. My current research focuses on
-          Artificial Intelligence and Agents, including AI for Healthcare,
-          Medical NLP, and Medical World Models.
-        </p>
-        <div class="bio_tags">
-          <span class="tag">High Performance Computing</span>
-          <span class="tag">Medical NLP</span>
-          <span class="tag">Agent Engineering</span>
-        </div>
       </div>
     </div>
   </section>
@@ -141,27 +130,7 @@
           <span class="news_text">Visiting Student at Zhejiang University NESA Lab, advised by Dr. Peiyu Liu.</span>
         </li>
       </ul>
-      <button class="news_toggle" id="news_toggle_btn" onclick="toggleNews()">Show more ↓</button>
-    </div>
-  </section>
-
-  <!-- ========== EDUCATION ========== -->
-  <section id="education">
-    <h2 class="section_heading">Education</h2>
-    <div class="entry_card">
-      <div class="entry_logo">
-          <img src="assets/images/hzcu_logo.png" alt="Hangzhou City University" />
-      </div>
-      <div class="entry_body">
-        <div class="entry_title"><a href="http://www.hzcu.edu.cn/" target="_blank">Hangzhou City University</a></div>
-        <div class="entry_sub">School of Computer and Computing Science</div>
-        <div class="entry_meta">
-          <span class="entry_degree">B.Eng. in Software Engineering</span>
-          <span class="entry_dash">·</span>
-          <span class="entry_date">Sep 2023 – Jul 2027</span>
-        </div>
-        <div class="entry_detail">GPA 3.77/4.0 &nbsp;·&nbsp; Average 86.29/100</div>
-      </div>
+      <button class="news_toggle" id="news_toggle_btn" aria-expanded="false" aria-controls="news_list" onclick="toggleNews()">Show more ↓</button>
     </div>
   </section>
 
@@ -185,6 +154,26 @@
         <p class="entry_desc">
           Medical AI research on multilingual clinical dataset generation
           and multimodal diagnostic reasoning evaluation.
+        </p>
+      </div>
+    </div>
+
+    <div class="entry_card">
+      <div class="entry_logo">
+        <img src="assets/images/touchstone_icon.png" alt="TouchStone AI Lab" />
+      </div>
+      <div class="entry_body">
+        <div class="entry_title"><a href="https://touchstoneai.org" target="_blank" rel="noopener noreferrer">TouchStone AI Lab</a></div>
+        <div class="entry_sub">Benchmark Research Team</div>
+        <div class="entry_meta">
+          <span class="entry_role">Researcher</span>
+          <span class="entry_dash">·</span>
+          <span class="entry_date">Jun 2026 – Present</span>
+        </div>
+        <div class="entry_detail">Advised by <a href="https://killthefullmoon.github.io" target="_blank" rel="noopener noreferrer">Hui Shen</a></div>
+        <p class="entry_desc">
+          Focused on computer-use agents. Touchstone delivers high-quality training data and real-world benchmarks for teams building and evaluating AI systems.
+          <a href="https://touchstoneai.org/research.html" target="_blank" rel="noopener noreferrer">Explore research</a>
         </p>
       </div>
     </div>
@@ -259,6 +248,21 @@
 
     <div class="pub_card">
       <div class="pub_body">
+        <div class="pub_title">Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases</div>
+        <div class="pub_authors">Rui Yang, Weihao Xuan, Yi Lin, <strong>Zhuhan Bao</strong>, Jonathan Chong Kai Liew, Matthew Yu Heng Wong, Nicolás Lescano, Nikita R. Paripati, Emily Ling-Lin Pai, Jiarui Liu, Heli Qi, Heng-Jui Chang, Benny Kai Guo Loo, Huitao Li, Kunyu Yu, Yufan Wang, Chuan Hong, Shijian Lu, Douglas Teodoro, Naoto Yokoya, Ross Koppel, Mona Diab, Hua Xu, David W. Bates, Nan Liu†, Yifan Peng†</div>
+        <div class="pub_venue">
+          <span class="pub_status">Under review at Nature Computational Science</span>
+        </div>
+        <div class="pub_links">
+          <a href="https://arxiv.org/abs/2607.25933" target="_blank">arXiv:2607.25933</a>
+          <span class="link_sep">·</span>
+          <a href="https://github.com/ruiyang-medinfo/ClinMM" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub_card">
+      <div class="pub_body">
         <div class="pub_title">SIMAX: A Scalable and Interpretable Framework for Multi-Fidelity and Annotated Clinician-Patient Dialogue Simulation</div>
         <div class="pub_authors">
           <strong>Zhuhan Bao*</strong>, <a href="https://scholar.google.com/citations?user=aCawmg0AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Rui Yang</a>*, <a href="https://scholar.google.com/citations?user=X2_pTbMAAAAJ&amp;hl=zh-CN&amp;oi=sra" target="_blank" rel="noopener">Bohao Yang</a>, Zhiyi Liu, Sicheng Shu, Ruio Heerschap, Le Li, Doris Yang, Elisabeth Bond, Haoyuan Wang, Nicoleta Economou-Zavlanos, Joshua M. Biro, Matthew McDermott, Nan Liu, Anand Chowdhury, Kai Sun, Kathryn Pollak, Ed Hammond, <a href="https://scholar.google.com/citations?user=o6JIv7QAAAAJ&amp;hl=en" target="_blank" rel="noopener">Chuan Hong</a>†
@@ -276,24 +280,29 @@
       </div>
     </div>
 
-    <div class="pub_card">
-      <div class="pub_body">
-        <div class="pub_title">Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases</div>
-        <div class="pub_authors">Rui Yang, Weihao Xuan, Yi Lin, <strong>Zhuhan Bao</strong>, Jonathan Chong Kai Liew, Matthew Yu Heng Wong, Nicolás Lescano, Nikita R. Paripati, Emily Ling-Lin Pai, Jiarui Liu, Heli Qi, Heng-Jui Chang, Benny Kai Guo Loo, Huitao Li, Kunyu Yu, Yufan Wang, Chuan Hong, Shijian Lu, Douglas Teodoro, Naoto Yokoya, Ross Koppel, Mona Diab, Hua Xu, David W. Bates, Nan Liu†, Yifan Peng†</div>
-        <div class="pub_venue">
-          <span class="pub_status">Under review at Nature Computational Science</span>
-        </div>
-        <div class="pub_links">
-          <a href="https://arxiv.org/abs/2607.25933" target="_blank">arXiv:2607.25933</a>
-          <span class="link_sep">·</span>
-          <a href="https://github.com/ruiyang-medinfo/ClinMM" target="_blank">Code</a>
-        </div>
-      </div>
-    </div>
-
     <p class="pub_footnote">
       * Equal contribution &nbsp;·&nbsp; † Corresponding author
     </p>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education">
+    <h2 class="section_heading">Education</h2>
+    <div class="entry_card">
+      <div class="entry_logo">
+          <img src="assets/images/hzcu_logo.png" alt="Hangzhou City University" />
+      </div>
+      <div class="entry_body">
+        <div class="entry_title"><a href="http://www.hzcu.edu.cn/" target="_blank">Hangzhou City University</a></div>
+        <div class="entry_sub">School of Computer and Computing Science</div>
+        <div class="entry_meta">
+          <span class="entry_degree">B.Eng. in Software Engineering</span>
+          <span class="entry_dash">·</span>
+          <span class="entry_date">Sep 2023 – Jul 2027</span>
+        </div>
+        <div class="entry_detail">GPA 3.77/4.0 &nbsp;·&nbsp; Average 86.29/100</div>
+      </div>
+    </div>
   </section>
 
   <!-- ========== PROJECTS ========== -->
@@ -436,6 +445,9 @@
       <a href="posts/index.html">Posts</a>
     </div>
     <p class="footer_copy">&copy; 2026 Zhuhan Bao. Pure HTML, CSS &amp; JS.</p>
+    <a class="visitor_badge" href="https://visitorbadge.io/status?path=https%3A%2F%2Fbaozhuhan.github.io" target="_blank" rel="noopener noreferrer" aria-label="View website visitor count">
+      <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbaozhuhan.github.io&amp;label=Visitors&amp;labelColor=%2341413d&amp;countColor=%23686d66&amp;style=flat" alt="Website visitors" loading="lazy" referrerpolicy="no-referrer" />
+    </a>
   </footer>
 
 </main>
@@ -463,10 +475,69 @@
   function toggleNews() {
     const hidden = document.querySelectorAll('#news_list .news_hidden');
     const btn = document.getElementById('news_toggle_btn');
-    const show = getComputedStyle(hidden[0]).display === 'none';
-    hidden.forEach(item => { item.style.display = show ? 'flex' : 'none'; });
-    btn.textContent = show ? 'Show less ↑' : 'Show more ↓';
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    hidden.forEach(item => { item.style.display = expanded ? 'none' : 'flex'; });
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.textContent = expanded ? 'Show more ↓' : 'Show less ↑';
   }
+
+  function setupNewsVisibility() {
+    const items = Array.from(document.querySelectorAll('#news_list .news_item'));
+    const currentYear = new Date().getFullYear();
+    const currentYearItems = items.filter(item => {
+      const date = item.querySelector('.news_date');
+      const match = date && date.textContent.match(/\d{4}/);
+      return match && Number(match[0]) === currentYear;
+    });
+    const visibleItems = currentYearItems.length ? currentYearItems : items.slice(0, 1);
+    items.forEach(item => item.classList.toggle('news_hidden', !visibleItems.includes(item)));
+    const btn = document.getElementById('news_toggle_btn');
+    btn.hidden = visibleItems.length === items.length;
+  }
+  setupNewsVisibility();
+
+  function setupSectionToggles() {
+    const itemSelectors = {
+      education: '.entry_card',
+      research: '.entry_card',
+      publications: '.pub_card',
+      projects: '.entry_card',
+      teaching: '.entry_card',
+      leadership: '.entry_card',
+      honors: '.honor_item'
+    };
+    const isChinese = document.documentElement.lang.toLowerCase().startsWith('zh');
+    const moreLabel = isChinese ? '展开更多 ↓' : 'Show more ↓';
+    const lessLabel = isChinese ? '收起 ↑' : 'Show less ↑';
+
+    document.querySelectorAll('main section[id]:not(#news)').forEach(section => {
+      const selector = itemSelectors[section.id];
+      if (!selector) return;
+
+      const items = Array.from(section.querySelectorAll(selector));
+      if (items.length <= 2) return;
+
+      items.slice(2).forEach(item => {
+        item.classList.add('section_collapsed_item');
+        item.hidden = true;
+      });
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'content_toggle';
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-controls', section.id);
+      button.textContent = moreLabel;
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') !== 'true';
+        items.slice(2).forEach(item => { item.hidden = !expanded; });
+        button.setAttribute('aria-expanded', String(expanded));
+        button.textContent = expanded ? lessLabel : moreLabel;
+      });
+      section.appendChild(button);
+    });
+  }
+  setupSectionToggles();
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {

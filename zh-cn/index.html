@@ -55,20 +55,10 @@
       </div>
       <div class="bio_text">
         <p>
-          你好！我是 <strong>鲍竹涵 (Zhuhan Bao)</strong>，浙大城市学院软件工程专业大四本科生。
-          目前是新加坡 Duke-NUS 医学院（杜克-新加坡国立大学医学院）访问学者，
-          同时在杜克大学医学院进行远程访问学习。
+          我叫 <strong>鲍竹涵（Zhuhan Bao）</strong>。
+          目前，我在 Duke-NUS 医学院跟随 <a href="https://www.duke-nus.edu.sg/directory/detail/liu-nan" target="_blank">Nan Liu 教授</a>开展访问学者研究。
+          同时，我在 <a href="https://touchstoneai.org/" target="_blank" rel="noopener noreferrer">TouchStone AI</a> 的 <a href="https://github.com/orgs/Touchstone-AI-Lab/teams/benchmark-research" target="_blank" rel="noopener noreferrer">Benchmark Research Team</a> 担任研究员。
         </p>
-        <p>
-          我在 Duke-NUS 生物医学数据科学中心 <a href="https://www.duke-nus.edu.sg/directory/detail/liu-nan" target="_blank">Nan Liu 教授</a>的课题组
-          以及杜克大学 <a href="https://biostat.duke.edu/profile/chuan-hong" target="_blank">Chuan Hong 教授</a>的课题组工作，目前的研究方向是
-          人工智能与智能体，包括 AI for Healthcare、医学自然语言处理 和 医学世界模型。
-        </p>
-        <div class="bio_tags">
-          <span class="tag">高性能计算</span>
-          <span class="tag">医学自然语言处理</span>
-          <span class="tag">智能体搭建</span>
-        </div>
       </div>
     </div>
   </section>
@@ -139,27 +129,7 @@
           <span class="news_text">前往 浙江大学 NESA 实验室 进行访问学习，导师：刘沛宇 博士后</span>
         </li>
       </ul>
-      <button class="news_toggle" id="news_toggle_btn" onclick="toggleNews()">展开更多 ↓</button>
-    </div>
-  </section>
-
-  <!-- ========== EDUCATION ========== -->
-  <section id="education">
-    <h2 class="section_heading">教育</h2>
-    <div class="entry_card">
-      <div class="entry_logo">
-          <img src="../assets/images/hzcu_logo.png" alt="浙大城市学院" />
-      </div>
-      <div class="entry_body">
-        <div class="entry_title"><a href="http://www.hzcu.edu.cn/" target="_blank">浙大城市学院</a></div>
-        <div class="entry_sub">计算机与计算科学学院</div>
-        <div class="entry_meta">
-          <span class="entry_degree">软件工程 本科</span>
-          <span class="entry_dash">·</span>
-          <span class="entry_date">2023.09 – 2027.07</span>
-        </div>
-        <div class="entry_detail">GPA 3.77/4.0 &nbsp;·&nbsp; 平均分 86.29/100</div>
-      </div>
+      <button class="news_toggle" id="news_toggle_btn" aria-expanded="false" aria-controls="news_list" onclick="toggleNews()">展开更多 ↓</button>
     </div>
   </section>
 
@@ -183,6 +153,26 @@
         <p class="entry_desc">
           开展医学人工智能研究，方向包括多语言临床数据集生成
           与多模态诊断推理评估。
+        </p>
+      </div>
+    </div>
+
+    <div class="entry_card">
+      <div class="entry_logo">
+        <img src="../assets/images/touchstone_icon.png" alt="TouchStone AI Lab" />
+      </div>
+      <div class="entry_body">
+        <div class="entry_title"><a href="https://touchstoneai.org" target="_blank" rel="noopener noreferrer">TouchStone AI Lab</a></div>
+        <div class="entry_sub">基准研究团队 (Benchmark Research Team)</div>
+        <div class="entry_meta">
+          <span class="entry_role">研究员</span>
+          <span class="entry_dash">·</span>
+          <span class="entry_date">2026.06 – 至今</span>
+        </div>
+        <div class="entry_detail">导师：<a href="https://killthefullmoon.github.io" target="_blank" rel="noopener noreferrer">Hui Shen</a></div>
+        <p class="entry_desc">
+          专注于 Computer Use Agent。Touchstone 为构建和评估 AI 系统的团队提供高质量训练数据与真实世界基准。
+          <a href="https://touchstoneai.org/research.html" target="_blank" rel="noopener noreferrer">了解研究</a>
         </p>
       </div>
     </div>
@@ -256,6 +246,21 @@
 
     <div class="pub_card">
       <div class="pub_body">
+        <div class="pub_title">Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases</div>
+        <div class="pub_authors">Rui Yang, Weihao Xuan, Yi Lin, <strong>Zhuhan Bao</strong>, Jonathan Chong Kai Liew, Matthew Yu Heng Wong, Nicolás Lescano, Nikita R. Paripati, Emily Ling-Lin Pai, Jiarui Liu, Heli Qi, Heng-Jui Chang, Benny Kai Guo Loo, Huitao Li, Kunyu Yu, Yufan Wang, Chuan Hong, Shijian Lu, Douglas Teodoro, Naoto Yokoya, Ross Koppel, Mona Diab, Hua Xu, David W. Bates, Nan Liu†, Yifan Peng†</div>
+        <div class="pub_venue">
+          <span class="pub_status">Nature Computational Science 审稿中</span>
+        </div>
+        <div class="pub_links">
+          <a href="https://arxiv.org/abs/2607.25933" target="_blank">arXiv:2607.25933</a>
+          <span class="link_sep">·</span>
+          <a href="https://github.com/ruiyang-medinfo/ClinMM" target="_blank">代码</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub_card">
+      <div class="pub_body">
         <div class="pub_title">SIMAX: A Scalable and Interpretable Framework for Multi-Fidelity and Annotated Clinician-Patient Dialogue Simulation</div>
         <div class="pub_authors">
           <strong>Zhuhan Bao*</strong>, <a href="https://scholar.google.com/citations?user=aCawmg0AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Rui Yang</a>*, <a href="https://scholar.google.com/citations?user=X2_pTbMAAAAJ&amp;hl=zh-CN&amp;oi=sra" target="_blank" rel="noopener">Bohao Yang</a>, Zhiyi Liu, Sicheng Shu, Ruio Heerschap, Le Li, Doris Yang, Elisabeth Bond, Haoyuan Wang, Nicoleta Economou-Zavlanos, Joshua M. Biro, Matthew McDermott, Nan Liu, Anand Chowdhury, Kai Sun, Kathryn Pollak, Ed Hammond, <a href="https://scholar.google.com/citations?user=o6JIv7QAAAAJ&amp;hl=en" target="_blank" rel="noopener">Chuan Hong</a>†
@@ -273,24 +278,29 @@
       </div>
     </div>
 
-    <div class="pub_card">
-      <div class="pub_body">
-        <div class="pub_title">Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases</div>
-        <div class="pub_authors">Rui Yang, Weihao Xuan, Yi Lin, <strong>Zhuhan Bao</strong>, Jonathan Chong Kai Liew, Matthew Yu Heng Wong, Nicolás Lescano, Nikita R. Paripati, Emily Ling-Lin Pai, Jiarui Liu, Heli Qi, Heng-Jui Chang, Benny Kai Guo Loo, Huitao Li, Kunyu Yu, Yufan Wang, Chuan Hong, Shijian Lu, Douglas Teodoro, Naoto Yokoya, Ross Koppel, Mona Diab, Hua Xu, David W. Bates, Nan Liu†, Yifan Peng†</div>
-        <div class="pub_venue">
-          <span class="pub_status">Nature Computational Science 审稿中</span>
-        </div>
-        <div class="pub_links">
-          <a href="https://arxiv.org/abs/2607.25933" target="_blank">arXiv:2607.25933</a>
-          <span class="link_sep">·</span>
-          <a href="https://github.com/ruiyang-medinfo/ClinMM" target="_blank">代码</a>
-        </div>
-      </div>
-    </div>
-
     <p class="pub_footnote">
       * 共同第一作者 &nbsp;·&nbsp; † 通讯作者
     </p>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education">
+    <h2 class="section_heading">教育</h2>
+    <div class="entry_card">
+      <div class="entry_logo">
+          <img src="../assets/images/hzcu_logo.png" alt="浙大城市学院" />
+      </div>
+      <div class="entry_body">
+        <div class="entry_title"><a href="http://www.hzcu.edu.cn/" target="_blank">浙大城市学院</a></div>
+        <div class="entry_sub">计算机与计算科学学院</div>
+        <div class="entry_meta">
+          <span class="entry_degree">软件工程 本科</span>
+          <span class="entry_dash">·</span>
+          <span class="entry_date">2023.09 – 2027.07</span>
+        </div>
+        <div class="entry_detail">GPA 3.77/4.0 &nbsp;·&nbsp; 平均分 86.29/100</div>
+      </div>
+    </div>
   </section>
 
   <!-- ========== PROJECTS ========== -->
@@ -419,6 +429,9 @@
       <a href="../posts/index.html">文章</a>
     </div>
     <p class="footer_copy">&copy; 2026 鲍竹涵. Pure HTML, CSS &amp; JS.</p>
+    <a class="visitor_badge" href="https://visitorbadge.io/status?path=https%3A%2F%2Fbaozhuhan.github.io" target="_blank" rel="noopener noreferrer" aria-label="查看网站访问量">
+      <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbaozhuhan.github.io&amp;label=%E8%AE%BF%E9%97%AE%E9%87%8F&amp;labelColor=%2341413d&amp;countColor=%23686d66&amp;style=flat" alt="网站访问量" loading="lazy" referrerpolicy="no-referrer" />
+    </a>
   </footer>
 
 </main>
@@ -446,10 +459,69 @@
   function toggleNews() {
     const hidden = document.querySelectorAll('#news_list .news_hidden');
     const btn = document.getElementById('news_toggle_btn');
-    const show = getComputedStyle(hidden[0]).display === 'none';
-    hidden.forEach(item => { item.style.display = show ? 'flex' : 'none'; });
-    btn.textContent = show ? '收起 ↑' : '展开更多 ↓';
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    hidden.forEach(item => { item.style.display = expanded ? 'none' : 'flex'; });
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.textContent = expanded ? '展开更多 ↓' : '收起 ↑';
   }
+
+  function setupNewsVisibility() {
+    const items = Array.from(document.querySelectorAll('#news_list .news_item'));
+    const currentYear = new Date().getFullYear();
+    const currentYearItems = items.filter(item => {
+      const date = item.querySelector('.news_date');
+      const match = date && date.textContent.match(/\d{4}/);
+      return match && Number(match[0]) === currentYear;
+    });
+    const visibleItems = currentYearItems.length ? currentYearItems : items.slice(0, 1);
+    items.forEach(item => item.classList.toggle('news_hidden', !visibleItems.includes(item)));
+    const btn = document.getElementById('news_toggle_btn');
+    btn.hidden = visibleItems.length === items.length;
+  }
+  setupNewsVisibility();
+
+  function setupSectionToggles() {
+    const itemSelectors = {
+      education: '.entry_card',
+      research: '.entry_card',
+      publications: '.pub_card',
+      projects: '.entry_card',
+      teaching: '.entry_card',
+      leadership: '.entry_card',
+      honors: '.honor_item'
+    };
+    const isChinese = document.documentElement.lang.toLowerCase().startsWith('zh');
+    const moreLabel = isChinese ? '展开更多 ↓' : 'Show more ↓';
+    const lessLabel = isChinese ? '收起 ↑' : 'Show less ↑';
+
+    document.querySelectorAll('main section[id]:not(#news)').forEach(section => {
+      const selector = itemSelectors[section.id];
+      if (!selector) return;
+
+      const items = Array.from(section.querySelectorAll(selector));
+      if (items.length <= 2) return;
+
+      items.slice(2).forEach(item => {
+        item.classList.add('section_collapsed_item');
+        item.hidden = true;
+      });
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'content_toggle';
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-controls', section.id);
+      button.textContent = moreLabel;
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') !== 'true';
+        items.slice(2).forEach(item => { item.hidden = !expanded; });
+        button.setAttribute('aria-expanded', String(expanded));
+        button.textContent = expanded ? lessLabel : moreLabel;
+      });
+      section.appendChild(button);
+    });
+  }
+  setupSectionToggles();
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
