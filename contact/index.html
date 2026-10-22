@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact · Zhuhan Bao</title>
-  <meta name="description" content="Email Zhuhan Bao, check free/busy availability, or send a Zoom meeting invitation." />
+  <meta name="description" content="Zhuhan Bao's calendar and contact links." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 </head>
@@ -13,7 +13,7 @@
   <header class="site_header">
     <div class="header_inner">
       <div class="header_top">
-        <h1 class="site_name contact_title">Contact</h1>
+        <h1 class="site_name contact_title"><a href="https://calendar.google.com/calendar/u/1?cid=emh1aGFuLmJhby5haUBnbWFpbC5jb20" target="_blank" rel="noopener noreferrer">Calendar</a></h1>
         <div class="header_buttons">
           <a href="../index.html" class="lang_btn" title="Back to homepage" aria-label="Back to homepage">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
@@ -24,59 +24,22 @@
           </button>
         </div>
       </div>
-      <p class="site_tagline">Email · availability · Zoom</p>
     </div>
   </header>
 
-  <section class="contact_intro" aria-labelledby="contact_intro_title">
-    <p class="contact_kicker">Get in touch</p>
-    <h2 id="contact_intro_title">Choose the simplest way to reach me.</h2>
-    <p>For a new conversation, start with email. If we are arranging a meeting, check the live free/busy calendar before sending an invitation.</p>
-  </section>
-
-  <section class="contact_email" aria-labelledby="email_title">
-    <div>
-      <p class="contact_kicker">Email</p>
-      <h2 id="email_title">Start a conversation</h2>
-    </div>
-    <a class="contact_primary_link" href="mailto:hengyuhan3762@gmail.com">hengyuhan3762@gmail.com <span aria-hidden="true">↗</span></a>
-  </section>
-
-  <section class="contact_calendar" aria-labelledby="calendar_title">
-    <div class="contact_section_head">
-      <div>
-        <p class="contact_kicker">Availability</p>
-        <h2 id="calendar_title">Free / busy calendar</h2>
-      </div>
-      <p>Live · Asia/Shanghai</p>
-    </div>
+  <section class="contact_calendar" aria-label="Calendar">
     <div class="calendar_frame">
       <iframe
-        src="https://calendar.google.com/calendar/embed?src=hengyuhan3762%40gmail.com&amp;ctz=Asia%2FShanghai&amp;mode=WEEK&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0"
-        title="Zhuhan Bao free and busy calendar"
-        loading="lazy"></iframe>
-    </div>
-    <p class="calendar_note">Event details remain hidden when the Google Calendar sharing permission is set to “See only free/busy”.</p>
-  </section>
-
-  <section class="contact_zoom" aria-labelledby="zoom_title">
-    <div class="contact_zoom_copy">
-      <p class="contact_kicker">Zoom</p>
-      <h2 id="zoom_title">Send a meeting invitation</h2>
-      <p>After we agree on a time, create the Zoom meeting and invite <strong>hengyuhan3762@gmail.com</strong>. Please include the topic, timezone, and agenda.</p>
-    </div>
-    <div class="contact_zoom_actions">
-      <a class="contact_primary_link" href="https://zoom.us/meeting/schedule" target="_blank" rel="noopener">Schedule in Zoom <span aria-hidden="true">↗</span></a>
-      <a class="contact_secondary_link" href="mailto:hengyuhan3762@gmail.com?subject=Zoom%20meeting%20invitation">Email the invitation</a>
+        src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=Asia%2FSingapore&amp;hl=en&amp;src=emh1aGFuLmJhby5haUBnbWFpbC5jb20&amp;src=emgtY24uY2hpbmEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039be5&amp;color=%234285f4"
+        title="Zhuhan Bao calendar"
+        width="800" height="600"></iframe>
     </div>
   </section>
 
-  <footer class="site_footer">
-    <div class="footer_links">
-      <a href="../index.html">Home</a><span class="dot">·</span><a href="../life/index.html">Life</a><span class="dot">·</span><a href="../posts/index.html">Posts</a>
-    </div>
-    <p class="footer_copy">&copy; 2026 Zhuhan Bao.</p>
-  </footer>
+  <nav class="contact_actions" aria-label="Contact links">
+    <a href="https://zoom.us/meeting/schedule" target="_blank" rel="noopener noreferrer">Schedule in Zoom</a>
+    <a href="mailto:zhuhan.bao.ai@gmail.com?subject=Zoom%20meeting%20invitation">Email me</a>
+  </nav>
 </main>
 
 <script>

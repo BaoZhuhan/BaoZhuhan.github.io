@@ -1033,147 +1033,19 @@ section {
 }
 
 /* ---------- Contact / calendar ---------- */
-.contact_wrap { max-width: 960px; }
-
-.contact_title {
-  font-size: clamp(2.25rem, 7vw, 4.5rem);
-  overflow-wrap: anywhere;
-  min-width: 0;
-}
-
-.contact_intro {
-  max-width: 720px;
-  padding: clamp(56px, 9vw, 96px) 0 clamp(72px, 11vw, 120px);
-}
-
-.contact_kicker {
-  margin-bottom: 12px;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.contact_intro h2,
-.contact_email h2,
-.contact_calendar h2,
-.contact_zoom h2 {
-  font-family: var(--font-serif);
-  font-style: normal;
-  color: var(--text);
-  overflow-wrap: anywhere;
-  min-width: 0;
-}
-
-.contact_intro h2 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.08;
-  margin-bottom: 24px;
-}
-
-.contact_intro > p:last-child {
-  max-width: 58ch;
-  color: var(--text-secondary);
-  font-size: 1.02rem;
-}
-
-.contact_email,
-.contact_calendar,
-.contact_zoom {
-  border-top: 1px solid var(--border);
-  padding: clamp(40px, 7vw, 72px) 0;
-}
-
-.contact_email {
-  display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  gap: 32px;
-  align-items: end;
-}
-
-.contact_email h2,
-.contact_calendar h2,
-.contact_zoom h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
-
-.contact_primary_link,
-.contact_secondary_link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 48px;
-  padding: 12px 16px;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.contact_primary_link {
-  background: var(--slate-dark);
-  color: var(--ivory-light);
-  border-color: var(--slate-dark);
-}
-
-.contact_primary_link:hover {
-  background: var(--accent-warm);
-  color: var(--slate-dark);
-  border-color: var(--accent-warm);
-}
-
-.contact_section_head {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  margin-bottom: 24px;
-}
-
-.contact_section_head > p {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.calendar_frame {
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-}
-
+.contact_wrap { max-width: 960px; padding-top: 32px; }
+.contact_title { font-size: 2rem; min-width: 0; }
+.contact_title a { text-decoration: none; }
+.contact_calendar { margin-top: 24px; }
+.calendar_frame { border: 1px solid var(--border); background: var(--bg-card); }
 .calendar_frame iframe {
   display: block;
   width: 100%;
-  height: 680px;
+  height: 600px;
   border: 0;
   background: var(--cloud-light);
 }
-
-.calendar_note {
-  margin-top: 12px;
-  color: var(--text-muted);
-  font-size: 0.82rem;
-}
-
-.contact_zoom {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
-  gap: clamp(32px, 7vw, 72px);
-  align-items: end;
-}
-
-.contact_zoom_copy > p:last-child {
-  margin-top: 16px;
-  color: var(--text-secondary);
-  max-width: 56ch;
-}
-
-.contact_zoom_actions {
-  display: grid;
-  gap: 10px;
-}
-
-.contact_secondary_link { color: var(--text-secondary); }
+.contact_actions { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 20px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1231,10 +1103,6 @@ section {
 
   .social_bar { justify-content: center; }
 
-  .contact_email,
-  .contact_zoom {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
   .post_feature {
     display: grid;
@@ -1254,20 +1122,9 @@ section {
     transition: none;
   }
 
-  .contact_section_head {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
 
   .calendar_frame iframe { height: 560px; }
 
-  .contact_primary_link,
-  .contact_secondary_link {
-    width: 100%;
-    font-size: 0.86rem;
-    white-space: nowrap;
-  }
 
   .entry_card {
     flex-direction: column;
