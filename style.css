@@ -489,7 +489,8 @@ section {
   transition: background var(--dur-fast) var(--ease-out);
 }
 
-.pub_card::after {
+.pub_card::after,
+.project_card::after {
   content: "";
   position: absolute;
   right: 20px;
@@ -501,6 +502,16 @@ section {
   -webkit-mask: url("assets/images/rod_of_asclepius.svg") center / contain no-repeat;
   mask: url("assets/images/rod_of_asclepius.svg") center / contain no-repeat;
   pointer-events: none;
+}
+
+.project_card { position: relative; }
+.project_icon_cpu::after {
+  -webkit-mask-image: url("assets/images/cpu.svg");
+  mask-image: url("assets/images/cpu.svg");
+}
+.project_icon_computer-use::after {
+  -webkit-mask-image: url("assets/images/computer-use.svg");
+  mask-image: url("assets/images/computer-use.svg");
 }
 
 .pub_card:last-of-type { margin-bottom: 0; }
