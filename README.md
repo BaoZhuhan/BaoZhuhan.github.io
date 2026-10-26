@@ -1,10 +1,8 @@
 # Zhuhan Bao — Academic Homepage
 
-Personal academic website built with pure HTML, CSS & JavaScript.
-
-- **Design**: Inspired by Anthropic's design system (warm ivory palette, Georgia serif headings)
-- **Stack**: Zero frameworks, zero build tools — just handcrafted HTML/CSS/JS
-- **Deploy**: GitHub Pages
+Compiled static files for Zhuhan Bao's personal homepage, deployed with GitHub Pages.
+The TypeScript source and build tools are maintained separately in the private
+`BaoZhuhan/page-source` repository.
 
 ## License
 
