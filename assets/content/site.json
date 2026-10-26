@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "identity": {
+    "name": "Zhuhan Bao",
+    "email": "zhuhan.bao.ai@gmail.com"
+  },
+  "sidebar": {
+    "role": "Visiting Scholar",
+    "affiliation": "Duke-NUS Medical School",
+    "avatar": "assets/images/avatar.jpg",
+    "links": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=O4o9BfcAAAAJ",
+        "icon": "scholar"
+      },
+      {
+        "label": "CV",
+        "url": "ZhuhanBao_CV_English.pdf",
+        "icon": "cv"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/BaoZhuhan",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ZhuhanBao",
+        "icon": "linkedin"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/ZhuhanBob",
+        "icon": "x"
+      }
+    ]
+  },
+  "about": [
+    "I am a final-year undergraduate in Software Engineering at Hangzhou City University and a Visiting Scholar at Duke-NUS Medical School, Singapore, working with [Prof. Nan Liu](https://www.duke-nus.edu.sg/directory/detail/liu-nan).",
+    "I am also interested in computer-use agents and LLM evaluation frameworks, and am part of the startup [Touchstone AI](https://touchstoneai.org/)."
+  ],
+  "interests": {
+    "introduction": "My research interests lie in medical artificial intelligence, computer-use agents, and high-performance computing. I work on building data, evaluation frameworks, and efficient systems for AI.",
+    "themes": [
+      "**Medical AI.** Clinical dialogue simulation, synthetic healthcare data, and multimodal diagnostic reasoning evaluation.",
+      "**Agents and efficient systems.** Cross-platform computer-use benchmarks, GPU inference optimization, and high-performance computing."
+    ]
+  },
+  "industryExperience": [
+    {
+      "visibility": "public",
+      "org": "TouchStone AI Lab",
+      "logo": "assets/images/touchstone_icon.png",
+      "date": "Jun 2026 – Present",
+      "orgUrl": "https://touchstoneai.org/"
+    }
+  ],
+  "academicExperience": [
+    {
+      "visibility": "public",
+      "org": "Duke-NUS Medical School",
+      "logo": "assets/images/dukenus_badges.png",
+      "date": "Sep 2026 – Dec 2026"
+    },
+    {
+      "visibility": "public",
+      "org": "Duke University",
+      "logo": "assets/images/duke_logo.png",
+      "date": "Jul 2025 – Sep 2026"
+    }
+  ],
+  "publications": [
+    {
+      "visibility": "public",
+      "id": "simax",
+      "title": "SIMAX: A Scalable and Interpretable Framework for Multi-Fidelity and Annotated Clinician-Patient Dialogue Simulation",
+      "authors": "[**Zhuhan Bao**^*^](https://baozhuhan.github.io/), [Rui Yang^*^](https://scholar.google.com/citations?user=aCawmg0AAAAJ), [Bohao Yang](https://scholar.google.com/citations?user=X2_pTbMAAAAJ), et al., [Chuan Hong^†^](https://biostat.duke.edu/profile/chuan-hong)",
+      "venue": "Under review",
+      "links": [
+        {
+          "kind": "arxiv",
+          "label": "arXiv:2606.30491",
+          "url": "https://arxiv.org/abs/2606.30491"
+        },
+        {
+          "kind": "code",
+          "label": "AutoEvaluation/SIMAX",
+          "url": "https://github.com/AutoEvaluation/SIMAX"
+        },
+        {
+          "kind": "dataset",
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Hengyuhan/SIMAX"
+        }
+      ],
+      "image": "assets/images/simax-figure-1.png"
+    },
+    {
+      "visibility": "public",
+      "id": "clinmm",
+      "title": "Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases",
+      "authors": "[Rui Yang](https://scholar.google.com/citations?user=aCawmg0AAAAJ), Weihao Xuan, Yi Lin, **Zhuhan Bao**, Huitao Li, et al., [Nan Liu](https://scholar.google.com/citations?user=ceF698kAAAAJ)^†^, [Yifan Peng](https://scholar.google.com/citations?user=IwGLficAAAAJ)^†^",
+      "venue": "Under review",
+      "links": [
+        {
+          "kind": "arxiv",
+          "label": "arXiv:2607.25933",
+          "url": "https://arxiv.org/abs/2607.25933"
+        },
+        {
+          "kind": "code",
+          "label": "ruiyang-medinfo/ClinMM",
+          "url": "https://github.com/ruiyang-medinfo/ClinMM"
+        }
+      ],
+      "image": "assets/images/clinmm-figure-1.png"
+    }
+  ],
+  "news": [
+    {
+      "date": "Sep 2026",
+      "text": "Visiting Scholar at Duke-NUS Medical School, Singapore, advised by Prof. Nan Liu."
+    },
+    {
+      "date": "Jul 2025",
+      "text": "Visiting Student at Duke University, advised by Prof. Chuan Hong."
+    }
+  ],
+  "zh": {
+    "role": "访问学者",
+    "affiliation": "新加坡杜克-国大医学院",
+    "headings": {
+      "about": "关于",
+      "interests": "研究兴趣",
+      "industry": "工业经历",
+      "academia": "学术经历",
+      "news": "新闻动态",
+      "publications": "论文"
+    },
+    "about": [
+      "我叫鲍竹涵，目前是浙大城市学院软件工程专业本科生，并在新加坡杜克-国大医学院（Duke-NUS）担任访问学者，师从 [Nan Liu 教授](https://www.duke-nus.edu.sg/directory/detail/liu-nan)。",
+      "我同时对计算机使用代理和大模型评测框架感兴趣，也是初创企业 [Touchstone AI](https://touchstoneai.org/) 的一员。"
+    ],
+    "interests": {
+      "introduction": "我的研究兴趣包括医疗人工智能、计算机使用代理和高性能计算，主要围绕 AI 数据、评测框架与高效系统开展工作。",
+      "themes": [
+        "**医疗人工智能。** 临床对话模拟、合成医疗数据，以及多模态诊断推理评测。",
+        "**智能体与高效系统。** 跨平台计算机使用基准、GPU 推理优化与高性能计算。"
+      ]
+    },
+    "news": [
+      {
+        "date": "Sep 2026",
+        "text": "访问学者于 Duke-NUS Medical School 开展研究，导师为 Prof. Nan Liu。"
+      },
+      {
+        "date": "Jul 2025",
+        "text": "以访问学生身份加入 Duke University，在 Prof. Chuan Hong 指导下开展研究。"
+      }
+    ],
+    "footer": "由 <a href=\"https://fr.wikipedia.org/wiki/For%C3%AAt_de_Rambouillet\">朗布依埃森林</a> 构建。",
+    "publicationVenues": [
+      "审稿中",
+      "审稿中"
+    ]
+  }
+}
