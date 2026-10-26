@@ -11,7 +11,10 @@
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <button class="language-toggle lang_btn" type="button" id="language-toggle" aria-label="Switch to Chinese" title="中文">中</button>
+  <div class="language-notice" id="language-notice" role="region" aria-label="Language options" hidden>
+    <span id="language-notice-copy"><span lang="zh">您希望查看到中文页面吗？</span> <span lang="en">Would you like to view this page in Chinese?</span></span>
+    <button type="button" id="language-action"><span lang="zh">【切换】</span><span lang="en">[Switch]</span></button>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="wrapper">
     <header class="profile" aria-label="Personal profile">
